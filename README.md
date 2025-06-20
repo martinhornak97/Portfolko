@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
+
+A clean, minimal personal portfolio built with Next.js 13+ (App Router), TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Modern Stack**: Next.js 13+ with App Router, TypeScript, Tailwind CSS
+- **Clean Design**: Minimal, responsive design inspired by [hansonwu.com](https://www.hansonwu.com/)
+- **Performance-First**: Optimized for speed and SEO
+- **Accessibility**: Semantic HTML and WCAG-compliant markup
+- **Type-Safe**: Full TypeScript support throughout
+- **Code Quality**: ESLint + Prettier for consistent code formatting
+
+## Tech Stack
+
+- **Framework**: Next.js 13+ (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Font**: Inter (via next/font/google)
+- **Utils**: clsx for conditional class names
+- **Linting**: ESLint with Next.js config
+- **Formatting**: Prettier
+
+## Project Structure
+
+```
+├── app/
+│   ├── about/page.tsx           # About page
+│   ├── contact/page.tsx         # Contact page
+│   ├── projects/[slug]/page.tsx # Dynamic project pages
+│   ├── globals.css              # Global styles
+│   ├── layout.tsx               # Root layout
+│   └── page.tsx                 # Homepage
+├── components/
+│   ├── Header.tsx               # Navigation header
+│   ├── Footer.tsx               # Site footer
+│   ├── Layout.tsx               # Main layout wrapper
+│   ├── ProjectCard.tsx          # Project display component
+│   └── index.ts                 # Component exports
+├── data/
+│   └── projects.ts              # Project data and types
+└── public/                      # Static assets
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000)
+
+## Customization
+
+### Personal Information
+Update the following files with your information:
+
+- **Name and tagline**: `app/page.tsx` (hero section)
+- **About content**: `app/about/page.tsx`
+- **Contact info**: `app/contact/page.tsx` and `components/Footer.tsx`
+- **Navigation branding**: `components/Header.tsx`
+
+### Projects
+Edit `data/projects.ts` to add your projects:
+
+```typescript
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Your Project Title',
+    description: 'Brief project description',
+    slug: 'project-url-slug',
+    link: 'https://your-project-url.com',
+    technologies: ['React', 'TypeScript', 'Tailwind'],
+    featured: true, // Show on homepage
+  },
+  // Add more projects...
+];
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Styling
+- **Colors**: Update Tailwind classes in components
+- **Typography**: Modify font settings in `app/layout.tsx`
+- **Layout**: Adjust spacing and sizing in components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint errors
+npm run format       # Format code with Prettier
+npm run format:check # Check code formatting
+npm run type-check   # Run TypeScript type checking
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com)
+3. Deploy with zero configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Other Platforms
+The app is a standard Next.js application and can be deployed to any platform that supports Node.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Performance Optimizations
 
-## Deploy on Vercel
+- **Next.js Image**: Automatic image optimization
+- **Font optimization**: Inter font loaded via next/font/google
+- **Static generation**: All pages are statically generated when possible
+- **Minimal bundle**: Only necessary code is shipped
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Browser Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ using Next.js and TypeScript
