@@ -27,11 +27,11 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           )}
           
           <div className="space-y-2">
-            <h3 className="text-lg font-medium text-black group-hover:text-gray-600 transition-colors">
+            <h3 className="group-hover:text-gray-600 transition-colors">
               {project.title}
             </h3>
             
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p>
               {project.description}
             </p>
             
@@ -39,7 +39,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
+                  className="meta-text inline-flex items-center px-2.5 py-0.5 rounded-full bg-gray-100"
                 >
                   {tech}
                 </span>

@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="min-h-screen">
           <Header />
           <main className="max-w-[1600px] mx-auto">
-            {children}
+        {children}
           </main>
           <Footer />
         </div>

@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-[#333333];
+  }
+
+  /* Hero Title - H1 */
+  h1 {
+    @apply text-[60px] font-semibold leading-[1.1] tracking-tight text-[#333333] max-w-[900px];
+  }
+
+  /* Section Title - H2 */
+  h2 {
+    @apply text-[28px] font-semibold leading-[1.1] text-[#333333];
+  }
+
+  /* Card/Summary Title - H3 */
+  h3 {
+    @apply text-[28px] font-medium leading-[1.1] text-[#333333];
+  }
+
+  /* Paragraphs */
+  p {
+    @apply text-[18px] leading-[1.6] text-[#333333];
+  }
+}
+
+@layer components {
+  .meta-text {
+    @apply text-sm tracking-wide text-[#333333];
+  }
+
+  .cta-text {
+    @apply text-base font-medium tracking-wide text-[#333333];
+  }
+} 

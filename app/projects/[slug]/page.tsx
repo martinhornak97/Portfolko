@@ -19,7 +19,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-20 py-16">
+      <div className="max-w-4xl mx-auto px-4 md:px-20 py-16">
         <div className="space-y-8">
           {/* Navigation */}
           <Link 
@@ -31,22 +31,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           {/* Project Header */}
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold text-black tracking-tight">
+            <h1>
               {project.title}
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p>
               {project.description}
             </p>
           </div>
 
           {/* Technologies */}
           <div className="space-y-4">
-            <h2 className="text-lg font-semibold text-black">Technologies</h2>
+            <h2 className="meta-text">Technologies</h2>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+                  className="meta-text inline-flex items-center px-3 py-1 rounded-full bg-gray-100"
                 >
                   {tech}
                 </span>
@@ -54,13 +54,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
-          {/* Project Image Placeholder */}
-          <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-            <span className="text-gray-400">Project Image Placeholder</span>
+          {/* Project Image */}
+          <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+            {project.image ? (
+              <img 
+                src={project.image} 
+                alt={`${project.title} preview`}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-gray-400">Project Image Placeholder</span>
+              </div>
+            )}
           </div>
 
           {/* Project Details */}
-          <div className="space-y-6 text-gray-600 leading-relaxed">
+          <div className="space-y-6">
             <p>
               This is where detailed project information would go. You can describe 
               the challenges you faced, the solutions you implemented, and the impact 
@@ -80,7 +90,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-black hover:bg-gray-50 transition-colors"
+                className="cta-text inline-flex items-center px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition-colors"
               >
                 View Project →
               </a>

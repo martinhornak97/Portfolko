@@ -12,9 +12,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative w-full bg-white py-16 pb-20 lg:py-32 lg:pb-40 px-20">
+    <footer className="relative w-full bg-white py-16 pb-20 lg:py-32 lg:pb-40 px-4 md:px-20">
       {/* Back to top button */}
-      <div className="absolute top-8 right-8 lg:top-12 lg:right-20">
+      <div className="absolute top-8 right-4 lg:top-12 lg:right-20">
         <a
           href="#"
           onClick={scrollToTop}
@@ -29,7 +29,7 @@ export function Footer() {
         <div className="flex flex-col gap-16 lg:flex-row lg:justify-between lg:items-start">
           {/* Left side - CTA */}
           <div className="space-y-4">
-            <p className="text-sm uppercase tracking-wide text-gray-500 text-left">
+            <p className="meta-text text-left">
               Looking to improve your internal tools or workflows?
             </p>
             <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-extrabold text-left leading-none opacity-10 hover:opacity-100 transition-opacity duration-300">
@@ -43,7 +43,7 @@ export function Footer() {
             <div className="flex flex-col gap-4">
               <a 
                 href="mailto:hello@martinhornak.com"
-                className="block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] uppercase font-medium border-black hover:bg-black hover:text-white transition-all duration-200"
+                className="cta-text block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] border-black hover:bg-black hover:text-white transition-all duration-200"
               >
                 Email
               </a>
@@ -51,7 +51,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/martinhornak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] uppercase font-medium border-black hover:bg-black hover:text-white transition-all duration-200"
+                className="cta-text block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] border-black hover:bg-black hover:text-white transition-all duration-200"
               >
                 LinkedIn
               </a>
@@ -59,30 +59,30 @@ export function Footer() {
                 href="https://dribbble.com/martinhornak"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] uppercase font-medium border-black hover:bg-black hover:text-white transition-all duration-200"
+                className="cta-text block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] border-black hover:bg-black hover:text-white transition-all duration-200"
               >
                 Dribbble
               </a>
             </div>
 
             {/* Bottom Credits */}
-            <div className="space-y-2 text-sm text-gray-500">
-              <p>
+            <div className="space-y-2">
+              <p className="meta-text">
                 Design by{' '}
                 <a href="#" className="font-medium hover:text-black transition-colors">
                   Martin Horňak
                 </a>
               </p>
-              <p>
+              <p className="meta-text">
                 Development by{' '}
                 <a href="#" className="font-medium hover:text-black transition-colors">
                   Martin Horňak
                 </a>
               </p>
-              <p className="mt-4 text-xs">
+              <p className="mt-4 meta-text">
                 Available for remote work worldwide.
               </p>
-              <p>© 2025</p>
+              <p className="meta-text">© 2025</p>
             </div>
           </div>
         </div>

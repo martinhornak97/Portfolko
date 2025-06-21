@@ -9,28 +9,28 @@ interface ProjectSectionProps {
 export function ProjectSection({ title, slug, image }: ProjectSectionProps) {
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[1600px] mx-auto px-20 py-20 flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Left side - Text */}
-        <div className="flex-1 space-y-2 text-left">
-          <span className="text-xs text-gray-500 uppercase tracking-widest">Case study</span>
-          <h2 className="text-4xl md:text-5xl font-semibold leading-tight max-w-xl">
-            {title}
-          </h2>
-          <Link 
-            href={`/projects/${slug}`}
-            className="text-sm underline hover:text-gray-700"
-          >
-            Read more
-          </Link>
-        </div>
+      <div className="max-w-[1600px] mx-auto px-4 md:px-20">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-12 md:gap-24 w-full py-16">
+          {/* LEFT - TEXT */}
+          <div className="flex-1 min-w-[300px] max-w-[400px] text-left">
+            <p className="meta-text">Case Study</p>
+            <h2 className="mt-2 break-words">{title}</h2>
+            <Link 
+              href={`/projects/${slug}`}
+              className="cta-text mt-4 inline-block hover:opacity-70 transition-opacity"
+            >
+              Read more →
+            </Link>
+          </div>
 
-        {/* Right side - Image */}
-        <div className="flex-1">
-          <img
-            src={image}
-            alt={`${title} mockup`}
-            className="w-full h-auto rounded-md shadow-sm"
-          />
+          {/* RIGHT - IMAGE */}
+          <div className="flex-1 max-w-[1000px] w-full flex justify-center items-center">
+            <img
+              src={image}
+              alt={`${title} preview`}
+              className="object-contain max-h-[600px] w-full"
+            />
+          </div>
         </div>
       </div>
     </div>

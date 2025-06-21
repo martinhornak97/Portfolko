@@ -1,27 +1,19 @@
 import Link from 'next/link';
-import { Layout } from '@/components/Layout';
 
-export default function NotFound() {
+export default function NotFoundPage() {
   return (
-    <Layout>
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <div className="text-center space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-6xl font-bold text-black tracking-tight">404</h1>
-            <h2 className="text-2xl font-semibold text-gray-600">Page Not Found</h2>
-            <p className="text-gray-500 max-w-md mx-auto">
-              The page you&apos;re looking for doesn&apos;t exist or has been moved.
-            </p>
-          </div>
-          
-          <Link 
-            href="/"
-            className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-black hover:bg-gray-50 transition-colors"
-          >
-            ← Back to Home
-          </Link>
-        </div>
-      </div>
-    </Layout>
+    <div className="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-20 py-32">
+      <h1 className="mb-6">Lost in the wireframes.</h1>
+      <p className="mb-12">
+        This page doesn't exist — or it was removed during the last redesign.<br />
+        Let's get you back on track.
+      </p>
+      <Link
+        href="/"
+        className="cta-text px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition"
+      >
+        ← Go back home
+      </Link>
+    </div>
   );
 } 

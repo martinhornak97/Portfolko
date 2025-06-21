@@ -5,37 +5,37 @@ import SkillsTools from '@/components/SkillsTools';
 export default function HomePage() {
   const projects = [
     {
-      id: '1',
-      title: 'Insurance Product Modeler',
-      description: 'Redesigned a modular interface for modeling insurance products.',
-      slug: 'insurance-product-modeler',
-      image: 'https://source.unsplash.com/random/800x600?sig=1'
+      id: '0',
+      title: 'Neuron – Vienna Insurance Group',
+      description: 'Modernizing internal software used by thousands of employees.',
+      slug: 'neuron',
+      image: '/images/neuron.png'
     },
     {
-      id: '2',
-      title: 'Banking Tasklist App',
-      description: 'Streamlined workflows for underwriting teams across 3 systems.',
-      slug: 'banking-tasklist-app',
-      image: 'https://source.unsplash.com/random/800x600?sig=2'
+      id: '4',
+      title: 'Banking App Redesign',
+      description: 'Simplified navigation and improved usability for a banking app.',
+      slug: 'banking-app',
+      image: '/images/vub-preview.png'
     },
     {
-      id: '3',
-      title: 'Datemapper',
-      description: 'Designed a flexible UI for mapping complex data structures.',
+      id: '5',
+      title: 'DateMapper',
+      description: 'Designed a curated map experience for ideal date spots based on midpoint logic.',
       slug: 'datemapper',
-      image: 'https://source.unsplash.com/random/800x600?sig=3'
-    },
+      image: '/images/datemapper-cover.jpg'
+    }
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="py-10 md:py-20 px-20">
-        <h1 className="max-w-[900px] mt-[200px] mb-[200px] text-5xl md:text-6xl font-semibold leading-tight">
+      <section className="py-10 md:py-20 px-4 md:px-20">
+        <h1 className="mt-[200px] mb-[200px]">
           UX designer focused on internal tools and design systems
         </h1>
         <div className="max-w-xl text-left space-y-4">
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+          <p>
             I design efficient backoffice interfaces and streamline complex workflows in enterprise environments. My work blends clarity, consistency, and usability across web applications and internal tooling.
           </p>
         </div>
