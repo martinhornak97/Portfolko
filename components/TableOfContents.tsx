@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 
 interface TOCItem {
   id: string
@@ -12,31 +13,51 @@ export default function TableOfContents() {
   const [headings, setHeadings] = useState<TOCItem[]>([])
   const [activeId, setActiveId] = useState('')
   const [isOpen, setIsOpen] = useState(false)
+  const [isReady, setIsReady] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
-  // Extract headings from content
+  // Initialize headings and set IDs
   useEffect(() => {
-    const content = document.getElementById('case-study-content')
-    if (!content) return
+    const initializeHeadings = () => {
+      const content = document.getElementById('case-study-content')
+      if (!content) return false
 
-    const elements = Array.from(content.querySelectorAll('h2, h3'))
-    const items: TOCItem[] = elements.map((element) => ({
-      id: element.id,
-      text: element.textContent || '',
-      level: element.tagName === 'H2' ? 2 : 3,
-    }))
+      const elements = Array.from(content.querySelectorAll('h2'))
+      
+      // First ensure all headings have IDs
+      elements.forEach((element, index) => {
+        if (!element.id) {
+          // Create URL-friendly ID from heading text
+          const id = element.textContent
+            ?.toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/(^-|-$)/g, '') || `heading-${index}`
+          element.id = id
+        }
+      })
 
-    setHeadings(items)
+      // Then create TOC items
+      const items: TOCItem[] = elements.map((element) => ({
+        id: element.id,
+        text: element.textContent || '',
+        level: 2,
+      }))
 
-    // Add IDs to headings if they don't exist
-    elements.forEach((element, index) => {
-      if (!element.id) {
-        element.id = `heading-${index}`
-      }
-    })
+      setHeadings(items)
+      return true
+    }
+
+    // Try to initialize and set ready state
+    const initialized = initializeHeadings()
+    setIsReady(initialized)
   }, [])
 
-  // Scroll spy using Intersection Observer
+  // Handle initial hash navigation and scroll spy
   useEffect(() => {
+    if (!isReady) return
+
+    // Set up intersection observer
     const callback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -49,23 +70,41 @@ export default function TableOfContents() {
       rootMargin: '-100px 0px -66%',
     })
 
-    const elements = document.querySelectorAll('h2, h3')
+    const elements = document.querySelectorAll('h2')
     elements.forEach((element) => observer.observe(element))
 
+    // Handle initial hash navigation
+    const hash = window.location.hash.slice(1)
+    if (hash) {
+      const element = document.getElementById(hash)
+      if (element) {
+        // Use requestAnimationFrame to ensure the scroll happens after layout
+        requestAnimationFrame(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+          setActiveId(hash)
+        })
+      }
+    }
+
     return () => observer.disconnect()
-  }, [])
+  }, [isReady])
 
   // Smooth scroll to heading
   const scrollToHeading = useCallback((id: string) => {
     const element = document.getElementById(id)
     if (element) {
+      // Update URL hash without triggering scroll
+      window.history.pushState({}, '', `${pathname}#${id}`)
       element.scrollIntoView({ behavior: 'smooth' })
+      setActiveId(id)
       setIsOpen(false)
     }
-  }, [])
+  }, [pathname])
 
   // Mobile toggle
   const toggleTOC = () => setIsOpen(!isOpen)
+
+  if (!isReady) return null
 
   return (
     <>
@@ -95,10 +134,7 @@ export default function TableOfContents() {
           <nav className="mt-2 p-4 bg-white rounded-lg shadow-lg">
             <ul className="space-y-2">
               {headings.map((heading) => (
-                <li
-                  key={heading.id}
-                  className={`${heading.level === 3 ? 'ml-4' : ''}`}
-                >
+                <li key={heading.id}>
                   <button
                     onClick={() => scrollToHeading(heading.id)}
                     className={`text-left ${
@@ -122,10 +158,7 @@ export default function TableOfContents() {
           <p className="font-medium mb-4">Summary</p>
           <ul className="space-y-2">
             {headings.map((heading) => (
-              <li
-                key={heading.id}
-                className={`${heading.level === 3 ? 'ml-4' : ''}`}
-              >
+              <li key={heading.id}>
                 <button
                   onClick={() => scrollToHeading(heading.id)}
                   className={`text-left transition-colors ${

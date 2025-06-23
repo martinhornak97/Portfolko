@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowUp } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -32,9 +33,11 @@ export function Footer() {
             <p className="meta-text text-left">
               Looking to improve your internal tools or workflows?
             </p>
-            <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-extrabold text-left leading-none opacity-10 hover:opacity-100 transition-opacity duration-300">
-              LET'S TALK
-            </h2>
+            <Link href="/contact">
+              <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-extrabold text-left leading-none opacity-10 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                LET'S TALK
+              </h2>
+            </Link>
           </div>
 
           {/* Right side - Contact & Links */}

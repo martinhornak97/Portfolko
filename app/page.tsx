@@ -34,8 +34,8 @@ export default function HomePage() {
         <h1 className="mt-[200px] mb-[200px]">
           UX designer focused on internal tools and design systems
         </h1>
-        <div className="max-w-xl text-left space-y-4">
-          <p>
+        <div className="max-w-[900px] text-left">
+          <p className="text-[20px] text-gray-800 leading-relaxed mt-[50px]">
             I design efficient backoffice interfaces and streamline complex workflows in enterprise environments. My work blends clarity, consistency, and usability across web applications and internal tooling.
           </p>
         </div>

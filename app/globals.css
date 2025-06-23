@@ -14,7 +14,7 @@
 
   /* Section Title - H2 */
   h2 {
-    @apply text-[28px] font-semibold leading-[1.1] text-[#333333];
+    @apply text-[28px] font-semibold leading-relaxed text-[#333333];
   }
 
   /* Card/Summary Title - H3 */
@@ -30,10 +30,10 @@
 
 @layer components {
   .meta-text {
-    @apply text-sm tracking-wide text-[#333333];
+    @apply text-sm md:text-base tracking-normal leading-relaxed text-[#333333];
   }
 
   .cta-text {
-    @apply text-base font-medium tracking-wide text-[#333333];
+    @apply text-base font-medium tracking-normal leading-loose text-[#333333];
   }
 } 

@@ -24,7 +24,7 @@ export default function CaseStudyLayout({
   return (
     <div className="max-w-[1200px] mx-auto px-6 py-32">
       {/* Header */}
-      <div className="max-w-[700px] mx-auto">
+      <div className="max-w-[700px] mx-auto mb-16">
         <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8">
           {title}
         </h1>
@@ -49,13 +49,18 @@ export default function CaseStudyLayout({
           </div>
         </div>
 
-        <p className="text-sm italic text-gray-500 mb-16">{disclaimer}</p>
+        <p className="text-sm italic text-gray-500">{disclaimer}</p>
       </div>
 
-      {/* Content with TableOfContents */}
-      <div className="relative">
-        {/* Main Content */}
-        <main id="case-study-content" className="max-w-[700px] mx-auto relative">
+      {/* Content with Floating Summary */}
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Summary - floating left on desktop, inline on mobile */}
+        <aside className="md:w-48 w-full md:sticky md:top-32 md:self-start">
+          <TableOfContents />
+        </aside>
+
+        {/* Content */}
+        <article id="case-study-content" className="flex-1 max-w-[700px]">
           <div className="prose prose-xl max-w-none">
             {children}
           </div>
@@ -68,16 +73,7 @@ export default function CaseStudyLayout({
               ← Back to all projects
             </Link>
           </div>
-        </main>
-
-        {/* Summary Navigation - Desktop Only */}
-        <div className="hidden md:block">
-          <div className="absolute top-0 -left-[300px]">
-            <div className="sticky top-[100px] w-[250px]">
-              <TableOfContents />
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   )
