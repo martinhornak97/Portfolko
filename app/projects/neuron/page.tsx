@@ -3,11 +3,11 @@ import CaseStudyLayout from '@/components/CaseStudyLayout'
 export default function NeuronCaseStudy() {
   return (
     <CaseStudyLayout
-      title="Neuron – Enterprise UX for Insurance Workflows"
+      title="Neuron - Enterprise UX for Insurance Workflows"
       role="Product Designer"
       impact="Up to 300 internal users daily (depending on domain)"
       tools="Figma, Token Studio"
-      timeline="01/2024 – Present"
+      timeline="01/2024 - Present"
       disclaimer="Due to NDA, visuals cannot be shown."
     >
       <div className="space-y-12">
@@ -17,7 +17,7 @@ export default function NeuronCaseStudy() {
           </p>
 
           <p className="text-xl">
-            I've been part of this product team full time since early 2024.&nbsp;Alongside 10 designers and 2 design system maintainers, I contributed to 3 out of 7 core domains: Product Modelator, Tasklist, and Reporting.&nbsp;Each of these tools required a different mindset and problem solving approach.
+            I've been part of this product team full time since early 2024. Alongside 10 designers and 2 design system maintainers, I contributed to 3 out of 7 core domains: Product Modelator, Tasklist, and Reporting.&nbsp;Each of these tools required a different mindset and problem solving approach.
           </p>
 
           <p className="text-xl">
