@@ -1,8 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { cn } from '../lib/utils';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 interface BeforeAfterComparisonProps {
   beforeImage: string;
@@ -18,8 +21,35 @@ export default function BeforeAfterComparison({
   className
 }: BeforeAfterComparisonProps) {
   const [showAfter, setShowAfter] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if we're on mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const toggleView = () => setShowAfter(!showAfter);
+
+  const currentImage = showAfter ? afterImage : beforeImage;
+  const currentAlt = `${showAfter ? 'After' : 'Before'}: ${alt}`;
+
+  const handleImageClick = () => {
+    if (isMobile) {
+      setLightboxOpen(true);
+    }
+  };
 
   return (
     <div className={cn("relative w-full flex flex-col items-center gap-6", className)}>
@@ -74,7 +104,13 @@ export default function BeforeAfterComparison({
       </div>
 
       {/* Image Container */}
-      <div className="relative w-full rounded-lg overflow-hidden">
+      <div 
+        className={cn(
+          "relative w-full rounded-lg overflow-hidden",
+          isMobile && "px-4"
+        )}
+        onClick={handleImageClick}
+      >
         <div className="relative aspect-[4/3] w-full">
           {/* Before Image */}
           <div 
@@ -105,9 +141,53 @@ export default function BeforeAfterComparison({
         </div>
       </div>
 
+      {/* Mobile enlarge button */}
+      {isMobile && (
+        <button
+          onClick={() => setLightboxOpen(true)}
+          className="text-sm text-gray-600 flex items-center gap-2 hover:text-gray-900 transition-colors"
+        >
+          <svg 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          >
+            <path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/>
+          </svg>
+          Tap to view full size
+        </button>
+      )}
+
+      {/* Lightbox - only for mobile */}
+      {isMobile && (
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={[{ src: currentImage, alt: currentAlt }]}
+          plugins={[Zoom]}
+          carousel={{ finite: true }}
+          zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
+          styles={{
+            container: { backgroundColor: "white" },
+            root: { "--yarl__color_backdrop": "rgba(255, 255, 255, 0.95)" }
+          }}
+          animation={{ fade: 300 }}
+          render={{
+            buttonPrev: () => null,
+            buttonNext: () => null
+          }}
+        />
+      )}
+
       {/* Screen Reader Instructions */}
       <div className="sr-only">
         Image comparison showing {showAfter ? 'after' : 'before'} state of {alt}. Use the toggle switch to compare between before and after versions.
+        {isMobile && ". Tap the image to view it in full size."}
       </div>
     </div>
   );

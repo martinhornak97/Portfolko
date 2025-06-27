@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  
+  useScrollReveal();
 
   useEffect(() => {
     if (isSubmitted) {
@@ -38,15 +41,15 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="py-10 md:py-20 px-4 md:px-20">
+    <section className="py-5 md:py-20 px-4 md:px-20">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start">
         
         {/* Nadpis + podnadpis */}
-        <div className="mt-[200px] mb-[200px] md:mb-0">
+        <div className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px] md:mb-0" data-reveal>
           {isSubmitted ? (
             <>
-              <h1 className="text-center md:text-left">Looking forward to our conversation</h1>
-              <div className="max-w-[900px] text-center md:text-left">
+              <h1 className="text-left">Looking forward to our conversation</h1>
+              <div className="max-w-[900px] text-left" data-reveal data-delay="100">
                 <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
                   Thanks for your message — I'll be in touch shortly so we can discuss next steps.
                 </p>
@@ -54,8 +57,8 @@ export default function ContactPage() {
             </>
           ) : (
             <>
-              <h1 className="text-center md:text-left">Let's talk</h1>
-              <div className="max-w-[900px] text-center md:text-left">
+              <h1 className="text-left">Let's talk</h1>
+              <div className="max-w-[900px] text-left" data-reveal data-delay="100">
                 <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
                   Feel free to reach out – whether it's work, feedback, or collaboration.
                 </p>
@@ -65,7 +68,7 @@ export default function ContactPage() {
         </div>
 
         {/* Formulár alebo Success tlačítko */}
-        <div className="md:mt-[200px] md:max-w-md md:w-full flex justify-center md:justify-end">
+        <div className="md:mt-[200px] md:max-w-md md:w-full flex justify-center md:justify-end" data-reveal data-delay="200">
           <div className="min-h-[450px] w-full max-w-md">
             {isSubmitted ? (
               <div className="space-y-6 w-full flex flex-col md:block">

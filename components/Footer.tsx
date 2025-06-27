@@ -35,8 +35,8 @@ export function Footer() {
             </p>
             <Link href="/contact">
               <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-extrabold text-left leading-none opacity-10 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                LET'S TALK
-              </h2>
+              LET'S TALK
+            </h2>
             </Link>
           </div>
 

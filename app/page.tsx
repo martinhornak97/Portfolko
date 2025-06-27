@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import { ProjectSection } from '@/components/ProjectSection';
 import SkillsTools from '@/components/SkillsTools';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 export default function HomePage() {
+  useScrollReveal();
+
   const projects = [
     {
       id: '0',
@@ -30,29 +35,32 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-10 md:py-20 px-4 md:px-20">
-        <h1 className="mt-[200px] mb-[200px]">
+      <section className="py-5 md:py-20 px-4 md:px-20">
+        <h1 className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px]" data-reveal>
           UX designer focused on internal tools and design systems
         </h1>
-        <div className="max-w-[900px] text-left">
-          <p className="text-[20px] text-gray-800 leading-relaxed mt-[50px]">
+        <div className="max-w-[900px] text-left" data-reveal data-delay="100">
+          <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
             I design efficient backoffice interfaces and streamline complex workflows in enterprise environments. My work blends clarity, consistency, and usability across web applications and internal tooling.
           </p>
         </div>
       </section>
 
       {/* Projects */}
-      {projects.map((project) => (
-        <ProjectSection
-          key={project.id}
-          title={project.title}
-          slug={project.slug}
-          image={project.image}
-        />
+      {projects.map((project, index) => (
+        <div key={project.id} data-reveal data-delay={200 + (index * 100)}>
+          <ProjectSection
+            title={project.title}
+            slug={project.slug}
+            image={project.image}
+          />
+        </div>
       ))}
 
       {/* Skills & Tools */}
-      <SkillsTools />
+      <div data-reveal data-delay="500">
+        <SkillsTools />
+      </div>
     </>
   );
 }

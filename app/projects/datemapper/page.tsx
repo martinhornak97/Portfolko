@@ -15,62 +15,62 @@ export default function DatemapperCaseStudy() {
     >
       <div className="space-y-12">
         <div className="space-y-6">
-          <p className="text-xl">
+          <p className="text-lg leading-relaxed">
             I joined the DateMapper team to help create a curated map app that simplifies the challenge of choosing a date location in a large city. The app finds the midpoint between two users and recommends nearby spots tailored to their preferences. I led the UX and UI design of all core screens, collaborating closely with the founders, iterating based on user feedback, and ensuring a clear, mobile-first experience.
           </p>
         </div>
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Role and Scope</h2>
-          <p className="text-xl">
+          <p className="text-lg leading-relaxed">
             I worked as the sole Product Designer on the MVP version of the DateMapper app. My responsibilities included defining the information architecture, designing all key screens, conducting usability testing, and collaborating directly with the founders. The goal was to create an intuitive mobile experience that feels both helpful and inviting.
           </p>
         </div>
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Problem</h2>
-          <p className="text-xl">
+          <p className="text-lg leading-relaxed">
             Coordinating a fair and convenient meeting point is often guesswork. Users needed a tool that could suggest suitable locations based on both users' positions while also offering refined recommendations based on atmosphere or preferences.
           </p>
         </div>
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Solution</h2>
-          <p className="text-xl">
+          <p className="text-lg leading-relaxed">
             Design an app that calculates a midpoint and overlays it with personalized venue suggestions. Create a seamless mobile-first interface that supports this concept while remaining elegant and easy to use.
           </p>
-        </div>
-
+      </div>
+      
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Design Process</h2>
-          <div className="space-y-6">
+      <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold mt-6 mb-2">Research and Discovery</h3>
-              <ul className="text-xl list-disc pl-6 space-y-2">
+              <h3 className="text-xl font-semibold mb-3">Research and Discovery</h3>
+              <ul className="text-lg leading-relaxed list-disc pl-6 space-y-2 mb-6">
                 <li>Interviewed target users who often plan dates or meetups</li>
                 <li>Compared existing tools like Google Maps and Corner app</li>
                 <li>Identified missing features such as midpoint calculation and niche filters</li>
               </ul>
-              <p className="text-xl font-medium mt-6">Key insight</p>
-              <p className="text-xl">
+              <p className="text-lg font-medium mb-2">Key insight</p>
+              <p className="text-lg leading-relaxed">
                 People want fast, reliable suggestions that feel personal and require minimal effort
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mt-6 mb-2">Information Architecture and User Flow</h3>
-              <p className="text-xl">
+              <h3 className="text-xl font-semibold mb-3">Information Architecture and User Flow</h3>
+              <p className="text-lg leading-relaxed mb-4">
                 The structure was designed to be simple and focused on conversion:
               </p>
-              <ul className="text-xl list-disc pl-6 space-y-2">
+              <ul className="text-lg leading-relaxed list-disc pl-6 space-y-2 mb-6">
                 <li>Landing page: brief intro to the app with a call to explore</li>
                 <li>Home page: dual input for starting points and venue preferences</li>
                 <li>Results page: curated venues at the calculated midpoint</li>
                 <li>Map view: interactive overview of venue locations</li>
                 <li>Add venue page: form for event hosts or businesses to suggest venues</li>
               </ul>
-              <p className="text-xl font-medium mt-6">User flow</p>
-              <ol className="text-xl list-decimal pl-6 space-y-2">
+              <p className="text-lg font-medium mb-2">User flow</p>
+              <ol className="text-lg leading-relaxed list-decimal pl-6 space-y-2">
                 <li>Both users enter their locations</li>
                 <li>App calculates midpoint and shows venue suggestions</li>
                 <li>Filters help refine results</li>
@@ -167,7 +167,7 @@ export default function DatemapperCaseStudy() {
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Visual Design</h2>
-          <ul className="text-xl list-disc pl-6 space-y-2">
+          <ul className="text-lg leading-relaxed list-disc pl-6 space-y-2">
             <li><span className="font-medium">Colors:</span> Neutral tones with calm accent colors to suggest warmth and clarity</li>
             <li><span className="font-medium">Typography:</span> Readable friendly sans-serif with clear hierarchy</li>
             <li><span className="font-medium">Iconography:</span> Custom icons to indicate key actions and reinforce app branding</li>
@@ -177,10 +177,10 @@ export default function DatemapperCaseStudy() {
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Testing and Iteration</h2>
-          <p className="text-xl">
+          <p className="text-lg leading-relaxed mb-4">
             Conducted tests with early users. Based on findings:
           </p>
-          <ul className="text-xl list-disc pl-6 space-y-2">
+          <ul className="text-lg leading-relaxed list-disc pl-6 space-y-2">
             <li>Added niche filters (queer friendly, woman owned)</li>
             <li>Made distance indicators clearer and more relatable</li>
             <li>Improved microcopy for better clarity</li>
@@ -189,7 +189,7 @@ export default function DatemapperCaseStudy() {
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Challenges</h2>
-          <ul className="text-xl list-disc pl-6 space-y-2">
+          <ul className="text-lg leading-relaxed list-disc pl-6 space-y-2">
             <li>Translating a fairly technical backend (midpoint logic) into something users can grasp quickly</li>
             <li>Balancing helpful UI with minimal distractions</li>
           </ul>
@@ -197,11 +197,11 @@ export default function DatemapperCaseStudy() {
 
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Reflection</h2>
-          <p className="text-xl">
+          <p className="text-lg leading-relaxed">
             This project reinforced how well-designed tools can turn real-life challenges into simple interactions. Designing for mobile-first forced clarity and focus. Iterating with users and closely collaborating with founders helped us land on a product that feels meaningful, lightweight, and memorable.
-          </p>
-        </div>
-
+        </p>
+      </div>
+      
         <section className="bg-muted/40 border border-muted rounded-2xl p-6 md:p-10 mt-10">
           <h2 className="text-2xl font-semibold mb-6">Client Testimonial</h2>
           <blockquote className="text-muted-foreground text-base leading-relaxed space-y-5 italic">
@@ -219,7 +219,7 @@ export default function DatemapperCaseStudy() {
             — Joshua Lever, CEO of DateMapper
           </footer>
         </section>
-      </div>
+    </div>
     </CaseStudyLayout>
   );
 } 

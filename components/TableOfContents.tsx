@@ -14,8 +14,22 @@ export default function TableOfContents() {
   const [activeId, setActiveId] = useState('')
   const [isOpen, setIsOpen] = useState(false)
   const [isReady, setIsReady] = useState(false)
-  const router = useRouter()
+  const [isMobile, setIsMobile] = useState(false)
   const pathname = usePathname()
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    // Initial check
+    checkMobile()
+    
+    // Update on resize
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Initialize headings and set IDs
   useEffect(() => {
@@ -95,11 +109,25 @@ export default function TableOfContents() {
     if (element) {
       // Update URL hash without triggering scroll
       window.history.pushState({}, '', `${pathname}#${id}`)
+      
+      // Remove any existing highlight classes
+      document.querySelectorAll('h2').forEach(heading => {
+        heading.classList.remove('highlight-heading')
+      })
+      
+      // Add highlight class to target heading
+      element.classList.add('highlight-heading')
+      
+      // Scroll to element
       element.scrollIntoView({ behavior: 'smooth' })
       setActiveId(id)
-      setIsOpen(false)
+      
+      // Only close dropdown on desktop
+      if (!isMobile) {
+        setIsOpen(false)
+      }
     }
-  }, [pathname])
+  }, [pathname, isMobile])
 
   // Mobile toggle
   const toggleTOC = () => setIsOpen(!isOpen)
@@ -109,10 +137,10 @@ export default function TableOfContents() {
   return (
     <>
       {/* Mobile version */}
-      <div className="md:hidden">
+      <div className="md:hidden border border-gray-200 bg-[#f9fafb] rounded-lg overflow-hidden">
         <button
           onClick={toggleTOC}
-          className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-600 bg-gray-50 rounded-lg"
+          className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-600"
         >
           <span>Summary</span>
           <svg
@@ -131,8 +159,8 @@ export default function TableOfContents() {
         </button>
 
         {isOpen && (
-          <nav className="mt-2 p-4 bg-white rounded-lg shadow-lg">
-            <ul className="space-y-2">
+          <nav className="border-t border-gray-200 p-4">
+            <ul className="space-y-3">
               {headings.map((heading) => (
                 <li key={heading.id}>
                   <button

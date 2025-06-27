@@ -1,22 +1,21 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import Script from "next/script";
-import "./globals.css";
+'use client'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+import { Inter } from "next/font/google"
+import Script from "next/script"
+import "./globals.css"
+import { useAnchorLinks } from '@/hooks/useAnchorLinks'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
-export const metadata: Metadata = {
-  title: "Martin Hornák - UX Designer",
-  description: "UX designer focused on internal tools and design systems.",
-};
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
+  useAnchorLinks()
+
   return (
     <html lang="en" className={inter.variable}>
       <head>
@@ -45,5 +44,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  );
+  )
 }

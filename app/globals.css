@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply text-[#333333];
   }
@@ -14,17 +18,31 @@
 
   /* Section Title - H2 */
   h2 {
-    @apply text-[28px] font-semibold leading-relaxed text-[#333333];
+    @apply text-[28px] font-semibold leading-relaxed text-[#333333] scroll-mt-[60px] md:scroll-mt-[100px];
   }
 
   /* Card/Summary Title - H3 */
   h3 {
-    @apply text-[28px] font-medium leading-[1.1] text-[#333333];
+    @apply text-[28px] font-medium leading-[1.1] text-[#333333] scroll-mt-[60px] md:scroll-mt-[100px];
   }
 
   /* Paragraphs */
   p {
     @apply text-[18px] leading-[1.6] text-[#333333];
+  }
+
+  /* Highlight animation for headings */
+  @keyframes highlight-fade {
+    0%, 20% {
+      background-color: rgba(243, 244, 246, 1); /* gray-100 */
+    }
+    100% {
+      background-color: rgba(243, 244, 246, 0);
+    }
+  }
+
+  .highlight-heading {
+    animation: highlight-fade 2s ease-out forwards;
   }
 }
 
@@ -35,5 +53,37 @@
 
   .cta-text {
     @apply text-base font-medium tracking-normal leading-loose text-[#333333];
+  }
+
+  /* Scroll Reveal Animation */
+  /* Default state - visible */
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Only apply initial animation state when JS is loaded */
+  .js-loaded [data-reveal]:not(.revealed) {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: transform, opacity;
+  }
+
+  /* Animation when revealed */
+  .js-loaded [data-reveal] {
+    transition: opacity 800ms ease-in-out, transform 800ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .js-loaded [data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Prevent animation on case study pages */
+  .case-study [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
   }
 } 
