@@ -4,7 +4,7 @@ import "./globals.css"
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { metadata } from './metadata'
-import { ClientLayout } from './components/ClientLayout'
+import { ClientLayout } from '@/components/ClientLayout'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 

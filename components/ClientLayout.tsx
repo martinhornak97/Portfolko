@@ -3,7 +3,7 @@
 import Script from "next/script"
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { AnchorLinks } from './AnchorLinks'
+import { AnchorLinks } from '@/components/AnchorLinks'
 
 interface ClientLayoutProps {
   children: React.ReactNode;
