@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Martin Horňak - UX/UI Designer",
-  description: "UX/UI Designer focused on internal tools and design systems.",
-} 
+  title: "Martin Horňak - UX Designer",
+  description: "UX designer focused on internal tools and design systems.",
+}; 

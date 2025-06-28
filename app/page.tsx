@@ -36,10 +36,10 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="py-5 md:py-20 px-4 md:px-20">
-        <h1 className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px]" data-reveal>
+        <h1 className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px]">
           UX designer focused on internal tools and design systems
         </h1>
-        <div className="max-w-[900px] text-left" data-reveal data-delay="100">
+        <div className="max-w-[900px] text-left" data-reveal>
           <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
             I design efficient backoffice interfaces and streamline complex workflows in enterprise environments. My work blends clarity, consistency, and usability across web applications and internal tooling.
           </p>
@@ -48,7 +48,7 @@ export default function HomePage() {
 
       {/* Projects */}
       {projects.map((project, index) => (
-        <div key={project.id} data-reveal data-delay={200 + (index * 100)}>
+        <div key={project.id} data-reveal data-delay={100 + (index * 100)}>
           <ProjectSection
             title={project.title}
             slug={project.slug}
@@ -58,7 +58,7 @@ export default function HomePage() {
       ))}
 
       {/* Skills & Tools */}
-      <div data-reveal data-delay="500">
+      <div data-reveal data-delay="400">
         <SkillsTools />
       </div>
     </>

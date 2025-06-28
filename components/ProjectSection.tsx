@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface ProjectSectionProps {
@@ -7,6 +8,9 @@ interface ProjectSectionProps {
 }
 
 export function ProjectSection({ title, slug, image }: ProjectSectionProps) {
+  // Convert image path to WebP
+  const webpImage = image.replace(/\.(png|jpe?g)$/, '.webp');
+  
   return (
     <div className="w-full bg-white">
       <div className="max-w-[1600px] mx-auto px-4 md:px-20">
@@ -16,11 +20,16 @@ export function ProjectSection({ title, slug, image }: ProjectSectionProps) {
         >
           {/* IMAGE */}
           <div className="w-full md:order-last md:flex-1 md:max-w-[1000px] flex justify-center items-center">
-            <img
-              src={image}
-              alt={`${title} preview`}
-              className="object-contain max-h-[600px] w-full group-hover:scale-[1.02] transition-transform duration-300"
-            />
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src={webpImage}
+                alt={`${title} preview`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
+                className="object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                priority={slug === 'neuron'} // Priority load first project
+              />
+            </div>
           </div>
 
           {/* TEXT */}
