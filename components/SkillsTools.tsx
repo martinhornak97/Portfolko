@@ -3,7 +3,7 @@ export default function SkillsTools() {
     <section className="w-full bg-white py-20 px-4 md:px-20">
       <div className="max-w-[1600px] mx-auto">
         <h2 className="meta-text mb-10">
-          Skills & Tools
+          UX Stack
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-y-12 text-center items-center">
           {[

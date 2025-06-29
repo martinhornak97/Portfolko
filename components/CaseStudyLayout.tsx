@@ -67,10 +67,10 @@ export default function CaseStudyLayout({
 
           <div className="mt-16">
             <Link 
-              href="/projects" 
+              href="/" 
               className="cta-text block hover:opacity-70 transition-opacity"
             >
-              ← Back to all projects
+              ← Back to homepage
             </Link>
           </div>
         </article>
