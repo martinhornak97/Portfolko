@@ -62,10 +62,9 @@ export default function TableOfContents() {
       return true
     }
 
-    // Try to initialize and set ready state
     const initialized = initializeHeadings()
     setIsReady(initialized)
-  }, [])
+  }, [pathname])
 
   // Handle initial hash navigation and scroll spy
   useEffect(() => {

@@ -15,6 +15,12 @@ export function Header() {
 
         <nav className="flex gap-6 items-center">
           <Link 
+            href="/work"
+            className="text-[16px] font-regular text-gray-800 hover:opacity-70 transition-colors"
+          >
+            My work
+          </Link>
+          <Link 
             href="/about"
             className="text-[16px] font-regular text-gray-800 hover:opacity-70 transition-colors"
           >

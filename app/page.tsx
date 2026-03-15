@@ -10,25 +10,28 @@ export default function HomePage() {
 
   const projects = [
     {
+      id: '4',
+      title: 'Chisme — social discovery app',
+      description: 'Mobile product helping women meet new friends through real-life plans and conversations.',
+      slug: 'chismeapp',
+      image: '/images/chisme-preview.png',
+      label: 'Founder project'
+    },
+    {
       id: '0',
       title: 'Neuron – Vienna Insurance Group',
       description: 'Modernizing internal software used by thousands of employees.',
       slug: 'neuron',
-      image: '/images/neuron.png'
-    },
-    {
-      id: '4',
-      title: 'Banking App Redesign',
-      description: 'Simplified navigation and improved usability for a banking app.',
-      slug: 'banking-app',
-      image: '/images/vub-preview.png'
+      image: '/images/neuron.png',
+      label: 'Enterprise platform'
     },
     {
       id: '5',
       title: 'DateMapper',
       description: 'Designed a curated map experience for ideal date spots based on midpoint logic.',
       slug: 'datemapper',
-      image: '/images/datemapper-cover.jpg'
+      image: '/images/datemapper-cover.jpg',
+      label: 'Startup project'
     }
   ];
 
@@ -53,9 +56,20 @@ export default function HomePage() {
             title={project.title}
             slug={project.slug}
             image={project.image}
+            label={project.label}
           />
         </div>
       ))}
+
+      {/* Link to all work */}
+      <div className="px-4 md:px-20 mt-4 mb-8" data-reveal data-delay="350">
+        <Link
+          href="/work"
+          className="text-sm md:text-base text-gray-700 hover:text-black hover:underline"
+        >
+          View all my work →
+        </Link>
+      </div>
 
       {/* Skills & Tools */}
       <div data-reveal data-delay="400">

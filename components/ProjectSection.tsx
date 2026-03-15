@@ -5,12 +5,10 @@ interface ProjectSectionProps {
   title: string;
   slug: string;
   image: string;
+  label?: string;
 }
 
-export function ProjectSection({ title, slug, image }: ProjectSectionProps) {
-  // Convert image path to WebP
-  const webpImage = image.replace(/\.(png|jpe?g)$/, '.webp');
-  
+export function ProjectSection({ title, slug, image, label }: ProjectSectionProps) {
   return (
     <div className="w-full bg-white">
       <div className="max-w-[1600px] mx-auto px-4 md:px-20">
@@ -22,7 +20,7 @@ export function ProjectSection({ title, slug, image }: ProjectSectionProps) {
           <div className="w-full md:order-last md:flex-1 md:max-w-[1000px] flex justify-center items-center">
             <div className="relative w-full aspect-[4/3]">
               <Image
-                src={webpImage}
+                src={image}
                 alt={`${title} preview`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
@@ -34,8 +32,12 @@ export function ProjectSection({ title, slug, image }: ProjectSectionProps) {
 
           {/* TEXT */}
           <div className="w-full md:flex-1 md:min-w-[300px] md:max-w-[400px] text-left">
-            <p className="meta-text">Case Study</p>
-            <h2 className="mt-2 md:mt-4 mb-1 md:mb-2 break-words group-hover:text-gray-600 transition-colors">{title}</h2>
+            {label && (
+              <p className="text-[12px] uppercase tracking-wider text-gray-500 mb-3 md:mb-4">
+                {label}
+              </p>
+            )}
+            <h2 className="mb-1 md:mb-2 break-words group-hover:text-gray-600 transition-colors">{title}</h2>
             <span className="cta-text mt-3 md:mt-6 inline-block group-hover:underline group-hover:text-black transition-all">
               Read more →
             </span>
