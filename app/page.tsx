@@ -1,5 +1,6 @@
 'use client';
 
+// Homepage — project order and sections
 import Link from 'next/link';
 import { ProjectSection } from '@/components/ProjectSection';
 import SkillsTools from '@/components/SkillsTools';
