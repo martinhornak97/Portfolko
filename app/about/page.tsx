@@ -3,44 +3,146 @@
 import Link from "next/link";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
+const timeline = [
+  {
+    period: "2025 – present",
+    role: "Co-Founder & Product Designer",
+    company: "Chisme",
+    description: "Women-only social app for meeting friends through shared plans. 20K+ MAU, 4.7★ App Store.",
+  },
+  {
+    period: "2024 – present",
+    role: "Product Designer",
+    company: "Vienna Insurance Group · Neuron",
+    description: "Enterprise platform for insurance workflows. 300+ daily users, 10-person design team, 3 core domains.",
+  },
+  {
+    period: "2024",
+    role: "Product Designer",
+    company: "DateMapper",
+    description: "Freelance. Led UX for a map-based dating app from concept to launch. Increased user retention and session duration.",
+  },
+  {
+    period: "2021 – 2023",
+    role: "UX Designer & SEO Specialist",
+    company: "GetFound",
+    description: "Agency work on websites, e-commerce flows, and landing pages. Where I transitioned from SEO into UX.",
+  },
+];
+
 export default function AboutPage() {
   useScrollReveal();
 
   return (
     <section className="py-5 md:py-20 px-4 md:px-20">
-      <h1 className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px]" data-reveal>
-        Hi, I'm Martin. I'm a UX designer who likes to bring clarity into messy systems.
-      </h1>
-      <div className="max-w-[900px] text-left">
-        <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]" data-reveal data-delay="100">
-          Most of my work happens behind the scenes, designing internal tools for large companies, mainly in insurance. I've worked on product modelers, tasklists, dashboards. Tools that help people do their jobs faster and with fewer errors. I care about structure, clarity, and usability.
-        </p>
 
-        <p className="text-[20px] text-gray-800 leading-relaxed mt-[50px]" data-reveal data-delay="200">
-          I got into UX from an SEO background, which means I often look at websites with a broader lens. I think about how things are found, how they're understood, and how they build trust.
+      {/* Opening */}
+      <div className="mt-[100px] md:mt-[200px] mb-[60px] md:mb-[100px]" data-reveal>
+        <h1>
+          Hi, I'm Martin. I bring clarity into messy systems.
+        </h1>
+        <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px] max-w-[700px]">
+          4+ years designing enterprise tools and consumer apps. Currently working full-time on Neuron at Vienna Insurance Group, while co-founding Chisme on the side.
         </p>
+      </div>
 
-        <p className="text-[20px] text-gray-800 leading-relaxed mt-[50px]" data-reveal data-delay="300">
-          Alongside the big enterprise stuff, I've also worked on smaller projects like agency websites, e-commerce flows, and a mobile app for field technicians. I enjoy variety and always aim to make things that feel simple, focused, and useful.
-        </p>
+      {/* Timeline + Quick facts */}
+      <div className="max-w-[900px] flex flex-col md:flex-row gap-12 md:gap-20 mb-[80px]" data-reveal data-delay="100">
 
-        <p className="text-[20px] text-gray-800 leading-relaxed mt-[50px]" data-reveal data-delay="400">
-          I usually work closely with analysts and developers. I like prototyping early, testing often, and thinking in systems. I try out new tools, especially AI, when they help. But I always keep the process practical.
-        </p>
+        {/* Timeline */}
+        <div className="flex-1">
+          <p className="text-sm uppercase tracking-wide text-gray-500 mb-6">Experience</p>
+          <div className="space-y-8">
+            {timeline.map((item) => (
+              <div key={item.period} className="flex flex-col sm:flex-row gap-1 sm:gap-8">
+                <div className="text-sm text-gray-400 shrink-0 w-[120px] pt-[3px]">
+                  {item.period}
+                </div>
+                <div>
+                  <p className="text-base font-semibold text-gray-900">{item.role}</p>
+                  <p className="text-sm text-gray-500 mb-1">{item.company}</p>
+                  <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <p className="text-[20px] text-gray-800 leading-relaxed mt-[50px]" data-reveal data-delay="500">
-          Right now I'm based in Barcelona. Outside of work, I play tennis, box a little, and dream about my next trip to the Canary Islands.
-        </p>
+        {/* Quick facts */}
+        <div className="shrink-0 md:w-[200px]">
+          <p className="text-sm uppercase tracking-wide text-gray-500 mb-6">Quick facts</p>
+          <div className="space-y-4 text-sm text-gray-700">
+            <div>
+              <p className="text-gray-400 text-xs uppercase tracking-wide mb-1">Location</p>
+              <p>Barcelona & Prague</p>
+            </div>
+            <div>
+              <p className="text-gray-400 text-xs uppercase tracking-wide mb-1">Languages</p>
+              <p>Slovak, Czech, English, Spanish</p>
+            </div>
+            <div>
+              <p className="text-gray-400 text-xs uppercase tracking-wide mb-1">Availability</p>
+              <p>Open to new opportunities</p>
+            </div>
+            <div>
+              <p className="text-gray-400 text-xs uppercase tracking-wide mb-1">Focus</p>
+              <p>Internal tools, design systems, consumer apps</p>
+            </div>
+          </div>
+        </div>
 
-        <Link 
+      </div>
+
+      {/* How I work */}
+      <div className="max-w-[700px] space-y-10 mb-[80px]">
+
+        <div data-reveal data-delay="200">
+          <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">How I work</p>
+          <p className="text-[20px] text-gray-800 leading-relaxed">
+            Most of my work happens behind the scenes, designing internal tools for large companies, mainly in insurance. I've worked on product modelers, tasklists, and dashboards. Tools that help people do their jobs faster and with fewer errors. I care about structure, clarity, and usability.
+          </p>
+        </div>
+
+        <div data-reveal data-delay="300">
+          <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">What makes me different</p>
+          <p className="text-[20px] text-gray-800 leading-relaxed">
+            Most designers specialize early. I didn't, and I think that's an advantage. I've designed enterprise platforms used by hundreds of employees, a consumer app with 20K+ monthly users, and everything in between: agency websites, e-commerce flows, mobile tools. Combined with an SEO background, I tend to think about design from the outside in. How things are found, understood, and trusted. Not just how they look.
+          </p>
+        </div>
+
+        <div data-reveal data-delay="400">
+          <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">Outside of work</p>
+          <p className="text-[20px] text-gray-800 leading-relaxed">
+            I play tennis, box occasionally, and keep a running list of places I want to visi.
+          </p>
+        </div>
+
+      </div>
+
+      {/* CTA */}
+      <div className="flex flex-wrap gap-4 items-center" data-reveal data-delay="500">
+        <Link
           href="/cv/MartinHornak_CV.pdf"
-          className="button-secondary mt-8 inline-block"
-          data-reveal
-          data-delay="600"
+          className="button-secondary inline-block"
         >
           Download CV
         </Link>
+        <a
+          href="mailto:hello@martinhornak.com"
+          className="text-[16px] text-gray-700 hover:text-black transition-colors"
+        >
+          hello@martinhornak.com
+        </a>
+        <a
+          href="https://www.linkedin.com/in/martinhornak"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[16px] text-gray-700 hover:text-black transition-colors"
+        >
+          LinkedIn ↗
+        </a>
       </div>
+
     </section>
   );
-} 
+}

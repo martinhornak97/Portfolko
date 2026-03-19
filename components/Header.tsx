@@ -18,7 +18,7 @@ export function Header() {
             href="/work"
             className="text-[16px] font-regular text-gray-800 hover:opacity-70 transition-colors"
           >
-            My work
+            Work
           </Link>
           <Link 
             href="/about"

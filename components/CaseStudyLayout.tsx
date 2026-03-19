@@ -22,7 +22,7 @@ export default function CaseStudyLayout({
   children
 }: CaseStudyLayoutProps) {
   return (
-    <div className="max-w-[1200px] mx-auto px-6 py-16 md:py-32 case-study">
+    <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 md:py-32 case-study">
       {/* Header */}
       <div className="max-w-[700px] mx-auto mb-8 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-4 md:mb-8">
@@ -60,8 +60,8 @@ export default function CaseStudyLayout({
         </aside>
 
         {/* Content */}
-        <article id="case-study-content" className="flex-1 max-w-[700px]">
-          <div className="prose prose-xl max-w-none">
+        <article id="case-study-content" className="flex-1 max-w-[700px] min-w-0">
+          <div className="prose prose-xl max-w-none prose-headings:scroll-mt-24">
             {children}
           </div>
 

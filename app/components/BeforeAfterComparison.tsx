@@ -56,7 +56,7 @@ export default function BeforeAfterComparison({
       {/* Custom Toggle Switch */}
       <div className="flex items-center gap-3">
         <span className={cn(
-          "text-sm transition-all duration-200",
+          "text-base sm:text-sm transition-all duration-200",
           !showAfter 
             ? "font-medium text-gray-900" 
             : "font-light text-gray-400"
@@ -94,7 +94,7 @@ export default function BeforeAfterComparison({
         </button>
 
         <span className={cn(
-          "text-sm transition-all duration-200",
+          "text-base sm:text-sm transition-all duration-200",
           showAfter 
             ? "font-medium text-gray-900" 
             : "font-light text-gray-400"
@@ -103,15 +103,12 @@ export default function BeforeAfterComparison({
         </span>
       </div>
 
-      {/* Image Container */}
+      {/* Image Container - on mobile constrain width so phone mockup appears larger (CSS only to avoid hydration mismatch) */}
       <div 
-        className={cn(
-          "relative w-full rounded-lg overflow-hidden",
-          isMobile && "px-4"
-        )}
+        className="relative w-full rounded-lg overflow-hidden px-2 md:px-0 max-w-[min(100%,320px)] md:max-w-none mx-auto md:mx-0"
         onClick={handleImageClick}
       >
-        <div className="relative aspect-[4/3] w-full">
+        <div className="relative w-full aspect-[9/19] md:aspect-[4/3] max-h-[520px] md:max-h-none">
           {/* Before Image */}
           <div 
             className="absolute inset-0 transition-opacity duration-300 ease-in-out"
@@ -145,7 +142,7 @@ export default function BeforeAfterComparison({
       {isMobile && (
         <button
           onClick={() => setLightboxOpen(true)}
-          className="text-sm text-gray-600 flex items-center gap-2 hover:text-gray-900 transition-colors"
+          className="text-base sm:text-sm text-gray-600 flex items-center gap-2 hover:text-gray-900 transition-colors"
         >
           <svg 
             width="20" 
