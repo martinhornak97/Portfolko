@@ -74,7 +74,7 @@ export default function MyWorkPage() {
                       fill
                       priority
                       sizes="(max-width: 768px) 100vw, 1200px"
-                      className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      className="object-cover"
                     />
                   </div>
                   <div className="flex flex-col flex-1">
@@ -104,7 +104,7 @@ export default function MyWorkPage() {
                           alt={`${project.title} preview`}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                          className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                          className="object-cover"
                         />
                       </div>
                       <div className="flex flex-col flex-1">
