@@ -32,13 +32,6 @@ const caseStudies = [
     description: 'Personal redesign of a mobile banking experience.',
     href: '/projects/banking-app',
     image: '/images/vub-preview.png'
-  },
-  {
-    id: 'bouracka',
-    title: 'Bouračka.cz — Entry point for a high-stakes tool',
-    description: 'Reframing a marketing landing page as a functional entry point for users reporting car accidents under stress.',
-    href: '/projects/bouracka',
-    image: '/images/bouracka-preview.png'
   }
 ];
 
