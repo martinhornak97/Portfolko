@@ -67,14 +67,14 @@ export default function MyWorkPage() {
                   href={caseStudies[0].href}
                   className="group flex flex-col gap-4 md:gap-5"
                 >
-                  <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+                  <div className="relative w-full aspect-[16/9]">
                     <Image
                       src={caseStudies[0].image}
                       alt={`${caseStudies[0].title} preview`}
                       fill
                       priority
                       sizes="(max-width: 768px) 100vw, 1200px"
-                      className="object-cover"
+                      className="object-cover rounded-2xl"
                     />
                   </div>
                   <div className="flex flex-col flex-1">
@@ -98,13 +98,13 @@ export default function MyWorkPage() {
                       href={project.href}
                       className="group flex flex-col gap-3"
                     >
-                      <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                      <div className="relative w-full aspect-[4/3]">
                         <Image
                           src={project.image}
                           alt={`${project.title} preview`}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                          className="object-cover"
+                          className="object-cover rounded-2xl"
                         />
                       </div>
                       <div className="flex flex-col flex-1">
