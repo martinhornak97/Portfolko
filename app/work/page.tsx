@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 const caseStudies = [
   {
@@ -61,13 +60,12 @@ export default function MyWorkPage() {
                 className="group flex flex-col gap-4 md:gap-5"
               >
                 <div className="relative w-full aspect-[16/9]">
-                  <Image
+                  <img
                     src={caseStudies[0].image}
                     alt={`${caseStudies[0].title} preview`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 1200px"
-                    quality={60}
-                    className="object-cover rounded-2xl"
+                    loading="eager"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                   />
                 </div>
                 <div className="flex flex-col flex-1">
@@ -90,13 +88,12 @@ export default function MyWorkPage() {
                     className="group flex flex-col gap-3"
                   >
                     <div className="relative w-full aspect-[4/3]">
-                      <Image
+                      <img
                         src={project.image}
                         alt={`${project.title} preview`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                        quality={60}
-                        className="object-cover rounded-2xl"
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                       />
                     </div>
                     <div className="flex flex-col flex-1">
