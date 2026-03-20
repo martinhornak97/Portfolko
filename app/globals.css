@@ -66,7 +66,6 @@
   .js-loaded [data-reveal]:not(.revealed) {
     opacity: 0;
     transform: translateY(20px);
-    will-change: transform, opacity;
   }
 
   /* Animation when revealed */
