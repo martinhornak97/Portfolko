@@ -27,7 +27,7 @@ export function useScrollReveal() {
           const delay = target.dataset.delay || '0';
           setTimeout(() => {
             target.classList.add('revealed');
-          }, parseInt(delay));
+          }, parseInt(delay, 10));
           observer.unobserve(target);
         }
       });

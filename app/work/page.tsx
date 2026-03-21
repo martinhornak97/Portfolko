@@ -1,4 +1,15 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/socialMetadata';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Work',
+  description:
+    'Selected UX and product design work: enterprise platforms, founder-led apps, public-sector tools, and product concepts.',
+  path: '/work',
+  ogImagePath: '/bouracka/bouracka-cover.png',
+  ogImageAlt: 'Case studies — selected design work',
+});
 
 const caseStudies = [
   {
@@ -38,7 +49,41 @@ const caseStudies = [
   },
 ];
 
-const companies = ['Vienna Insurance Group', 'Kooperativa', 'GetFound', 'DateMapper'];
+/** Files in /public/logos/ */
+const trustedLogos: {
+  name: string;
+  src: string;
+  alt: string;
+  /** Extra scale when asset reads small inside the box (e.g. padded raster) */
+  imgClassName?: string;
+}[] = [
+  {
+    name: 'Vienna Insurance Group',
+    src: '/logos/vig-logo.svg',
+    alt: 'Vienna Insurance Group',
+  },
+  {
+    name: 'Kooperativa',
+    src: '/logos/kooperativa-logo.svg',
+    alt: 'Kooperativa',
+  },
+  {
+    name: 'GetFound',
+    src: '/logos/getfound-logo.svg',
+    alt: 'GetFound',
+  },
+  {
+    name: 'Bouracka',
+    src: '/logos/bouracka-logo.svg',
+    alt: 'Bouracka.cz',
+  },
+  {
+    name: 'Trask',
+    src: '/logos/trask-logo.jpg',
+    alt: 'Trask',
+    imgClassName: 'scale-[1.48] md:scale-[1.55] origin-center',
+  },
+];
 
 export default function MyWorkPage() {
   const [featured, ...rest] = caseStudies;
@@ -138,11 +183,21 @@ export default function MyWorkPage() {
           <p className="text-sm uppercase tracking-wide text-gray-500">
             Trusted by teams at
           </p>
-          <div className="flex flex-wrap gap-x-8 gap-y-3 md:gap-x-12 md:gap-y-4 text-sm md:text-base text-gray-700">
-            {companies.map((company) => (
-              <span key={company} className="whitespace-nowrap">
-                {company}
-              </span>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-5">
+            {trustedLogos.map((logo) => (
+              <div
+                key={logo.name}
+                className="flex h-[88px] w-full items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-white px-4 py-3 md:h-[100px]"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element -- static assets from /public */}
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className={`max-h-full max-w-full object-contain ${logo.imgClassName ?? ''}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             ))}
           </div>
         </div>

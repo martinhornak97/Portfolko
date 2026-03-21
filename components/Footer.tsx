@@ -85,7 +85,7 @@ export function Footer() {
               <p className="mt-4 meta-text">
                 Available for remote work worldwide.
               </p>
-              <p className="meta-text">© 2025</p>
+              <p className="meta-text">© 2026</p>
             </div>
           </div>
         </div>

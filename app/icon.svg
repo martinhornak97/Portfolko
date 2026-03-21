@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="6" fill="#111"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="600">M</text>
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="180" height="180" rx="90" fill="black"/>
+<path d="M28.3125 111.5V99.6328L32.6328 98.9492V82.0508L28.3125 81.3672V69.5H50.1055L58.9102 85.6328L67.6328 69.5H89.4531V81.3672L85.1328 82.0508V98.9492L89.4531 99.6328V111.5H67.6328V91.0195L58.9102 106.113L50.1055 91.0195V111.5H28.3125ZM93.0352 111.5V99.6328L97.3008 98.9492V82.1055L93.0352 81.4219V69.5H118.848V81.4219L114.801 82.1055V87.2734H128.801V82.1055L124.754 81.4219V69.5H150.566V81.4219L146.301 82.1055V98.9492L150.566 99.6328V111.5H124.754V99.6328L128.801 98.9492V93.4531H114.801V98.9492L118.848 99.6328V111.5H93.0352Z" fill="white"/>
 </svg>

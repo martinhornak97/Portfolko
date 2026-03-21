@@ -35,7 +35,7 @@ export default function ContactPage() {
       } else {
         throw new Error('Something went wrong');
       }
-    } catch (err) {
+    } catch {
       setError('Something went wrong. Please try again later.');
     }
   }
