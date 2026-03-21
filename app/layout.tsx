@@ -1,12 +1,10 @@
 import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { metadata } from './metadata'
-import { ClientLayout } from '@/components/ClientLayout'
+import { metadata } from "./metadata"
+import { ClientLayout } from "@/components/ClientLayout"
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export { metadata }
 
@@ -15,5 +13,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <ClientLayout inter={inter}>{children}</ClientLayout>
+  return (
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans text-black bg-white">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EZRVJEZB3L"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EZRVJEZB3L', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+        <ClientLayout>{children}</ClientLayout>
+      </body>
+    </html>
+  )
 }

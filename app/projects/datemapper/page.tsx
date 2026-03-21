@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function DatemapperCaseStudy() {
   return (
     <CaseStudyLayout
-      title="DateMapper"
+      title="DateMapper: Midpoint venues"
       role="Product Designer"
       impact="Increased user retention and engagement after redesign"
       tools="Figma"

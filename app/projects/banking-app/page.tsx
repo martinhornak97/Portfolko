@@ -11,7 +11,7 @@ export default function BankingAppCaseStudy() {
 
   return (
     <CaseStudyLayout
-      title="VÚB Banking App Redesign"
+      title="VÚB: Retail banking"
       role="UX/UI Designer"
       impact="Personal Project"
       tools="Figma"

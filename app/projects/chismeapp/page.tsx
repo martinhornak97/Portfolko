@@ -7,7 +7,7 @@ import BeforeAfterComparison from '../../components/BeforeAfterComparison'
 export default function ChismeCaseStudyPage() {
   return (
     <CaseStudyLayout
-      title="Chisme – Social discovery app for real-life friendships"
+      title="Chisme: Women's meetups"
       role="Co-Founder & Product Designer"
       impact="20K+ monthly active users, 4.7★ rating, subscription revenue"
       tools="Figma, Cursor, RevenueCat"

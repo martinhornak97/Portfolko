@@ -1,42 +1,48 @@
-'use client';
-
 import Link from 'next/link';
-import Image from 'next/image';
 
 const caseStudies = [
   {
     id: 'chisme',
-    title: 'Chisme — Social discovery app',
-    description: 'Helping women meet new friends through real-life plans.',
+    title: "Chisme: Women's meetups",
+    label: 'Founder project',
     href: '/projects/chismeapp',
-    image: '/images/chisme-preview.png'
+    image: '/images/chisme-preview.png',
   },
   {
     id: 'neuron',
-    title: 'Neuron platform — Vienna Insurance Group',
-    description: 'Enterprise platform for insurance workflows and product configuration.',
+    title: 'Neuron: Insurance backoffice',
+    label: 'Enterprise platform',
     href: '/projects/neuron',
-    image: '/images/neuron.png'
+    image: '/images/neuron.png',
+  },
+  {
+    id: 'bouracka',
+    title: 'Bouracka: Crash reporting',
+    label: 'Public service',
+    href: '/projects/bouracka',
+    image: '/bouracka/bouracka-cover.png',
   },
   {
     id: 'datemapper',
-    title: 'DateMapper',
-    description: 'Map-based dating app built around midpoint logic.',
+    title: 'DateMapper: Midpoint venues',
+    label: 'Startup project',
     href: '/projects/datemapper',
-    image: '/images/datemapper-cover.jpg'
+    image: '/images/datemapper-cover.jpg',
   },
   {
     id: 'banking-app',
-    title: 'VÚB Banking App redesign',
-    description: 'Personal redesign of a mobile banking experience.',
+    title: 'VÚB: Retail banking',
+    label: 'Personal project',
     href: '/projects/banking-app',
-    image: '/images/vub-preview.png'
-  }
+    image: '/images/vub-preview.png',
+  },
 ];
 
 const companies = ['Vienna Insurance Group', 'Kooperativa', 'GetFound', 'DateMapper'];
 
 export default function MyWorkPage() {
+  const [featured, ...rest] = caseStudies;
+
   return (
     <>
       <section className="py-5 md:py-20 px-4 md:px-20">
@@ -55,63 +61,74 @@ export default function MyWorkPage() {
           <h2>Case studies</h2>
 
           <div className="space-y-6">
-            {caseStudies.length > 0 && (
-              <Link
-                href={caseStudies[0].href}
-                className="group flex flex-col gap-4 md:gap-5"
-              >
-                <div className="relative w-full aspect-[16/9]">
-                  <Image
-                    src={caseStudies[0].image}
-                    alt={`${caseStudies[0].title} preview`}
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 1200px"
-                    quality={70}
-                    className="object-cover rounded-2xl"
-                  />
-                </div>
-                <div className="flex flex-col flex-1">
-                  <h3 className="mb-1 break-words group-hover:text-gray-600 transition-colors">
-                    {caseStudies[0].title}
-                  </h3>
-                  <p className="text-[16px] leading-relaxed text-gray-700">
-                    {caseStudies[0].description}
-                  </p>
-                </div>
-              </Link>
-            )}
-
-            {caseStudies.length > 1 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pt-4">
-                {caseStudies.slice(1).map((project) => (
-                  <Link
-                    key={project.id}
-                    href={project.href}
-                    className="group flex flex-col gap-3"
-                  >
-                    <div className="relative w-full aspect-[4/3]">
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} preview`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                        quality={70}
-                        className="object-cover rounded-2xl"
-                      />
-                    </div>
-                    <div className="flex flex-col flex-1">
-                      <h3 className="mb-1 break-words group-hover:text-gray-600 transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-[16px] leading-relaxed text-gray-700">
-                        {project.description}
-                      </p>
-                    </div>
-                  </Link>
-                ))}
+            <Link
+              href={featured.href}
+              prefetch={false}
+              className="group flex flex-col gap-4 md:gap-5"
+            >
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl bg-gray-50">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static public assets; avoids /_next/image optimizer failures */}
+                <img
+                  src={featured.image}
+                  alt={`${featured.title} preview`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
-            )}
+              <div className="flex flex-col flex-1 text-left">
+                <p className="text-[12px] uppercase tracking-wider text-gray-500 mb-3 md:mb-4">
+                  {featured.label}
+                </p>
+                <h3 className="mb-1 md:mb-2 break-words text-[28px] font-semibold leading-relaxed text-[#333333] group-hover:text-gray-600 transition-colors">
+                  {featured.title}
+                </h3>
+                <span className="cta-text mt-3 md:mt-6 inline-block group-hover:underline group-hover:text-black transition-all">
+                  Read more →
+                </span>
+              </div>
+            </Link>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pt-4">
+              {rest.map((project) => (
+                <Link
+                  key={project.id}
+                  href={project.href}
+                  prefetch={false}
+                  className="group flex flex-col gap-3"
+                >
+                  <div
+                    className={`relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-gray-50 ${
+                      project.id === 'bouracka' ? 'bg-[#ebebeb]' : ''
+                    }`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element -- static public assets */}
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className={
+                        project.id === 'bouracka'
+                          ? 'absolute inset-0 block h-full w-full origin-top scale-[1.18] object-cover object-top'
+                          : 'absolute inset-0 block h-full w-full object-cover'
+                      }
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div className="flex flex-col flex-1 text-left">
+                    <p className="text-[12px] uppercase tracking-wider text-gray-500 mb-3 md:mb-4">
+                      {project.label}
+                    </p>
+                    <h3 className="mb-1 md:mb-2 break-words text-[28px] font-semibold leading-relaxed text-[#333333] group-hover:text-gray-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <span className="cta-text mt-3 md:mt-6 inline-block group-hover:underline group-hover:text-black transition-all">
+                      Read more →
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -133,4 +150,3 @@ export default function MyWorkPage() {
     </>
   );
 }
-

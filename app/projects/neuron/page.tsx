@@ -3,7 +3,7 @@ import CaseStudyLayout from '@/components/CaseStudyLayout'
 export default function NeuronCaseStudy() {
   return (
     <CaseStudyLayout
-      title="Neuron - Enterprise UX for Insurance Workflows"
+      title="Neuron: Insurance backoffice"
       role="Product Designer"
       impact="3 of 7 core domains, greenfield product"
       tools="Figma, Token Studio"

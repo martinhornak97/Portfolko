@@ -12,28 +12,28 @@ export default function HomePage() {
   const projects = [
     {
       id: '4',
-      title: 'Chisme — social discovery app',
+      title: "Chisme: Women's meetups",
       description: 'Mobile product helping women meet new friends through real-life plans and conversations.',
       slug: 'chismeapp',
       image: '/images/chisme-preview.png',
-      label: 'Founder project'
+      label: 'Founder project',
     },
     {
       id: '0',
-      title: 'Neuron – Vienna Insurance Group',
+      title: 'Neuron: Insurance backoffice',
       description: 'Modernizing internal software used by thousands of employees.',
       slug: 'neuron',
       image: '/images/neuron.png',
-      label: 'Enterprise platform'
+      label: 'Enterprise platform',
     },
     {
-      id: '5',
-      title: 'DateMapper',
-      description: 'Designed a curated map experience for ideal date spots based on midpoint logic.',
-      slug: 'datemapper',
-      image: '/images/datemapper-cover.jpg',
-      label: 'Startup project'
-    }
+      id: 'bouracka',
+      title: 'Bouracka: Crash reporting',
+      description: 'Landing entry for a CKP-backed digital accident reporting service.',
+      slug: 'bouracka',
+      image: '/bouracka/bouracka-cover.png',
+      label: 'Public service',
+    },
   ];
 
   return (
@@ -58,6 +58,7 @@ export default function HomePage() {
             slug={project.slug}
             image={project.image}
             label={project.label}
+            imageFit={project.slug === 'bouracka' ? 'cover' : undefined}
           />
         </div>
       ))}

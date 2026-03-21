@@ -6,9 +6,17 @@ interface ProjectSectionProps {
   slug: string;
   image: string;
   label?: string;
+  /** `cover` fills the frame (may crop sides); default `contain` shows full image. */
+  imageFit?: 'contain' | 'cover';
 }
 
-export function ProjectSection({ title, slug, image, label }: ProjectSectionProps) {
+export function ProjectSection({
+  title,
+  slug,
+  image,
+  label,
+  imageFit = 'contain',
+}: ProjectSectionProps) {
   return (
     <div className="w-full bg-white">
       <div className="max-w-[1600px] mx-auto px-4 md:px-20">
@@ -18,14 +26,23 @@ export function ProjectSection({ title, slug, image, label }: ProjectSectionProp
         >
           {/* IMAGE */}
           <div className="w-full md:order-last md:flex-1 md:max-w-[1000px] flex justify-center items-center">
-            <div className="relative w-full aspect-[4/3]">
+            {/* Cap height on small screens so previews (e.g. wide mockups) do not dominate the viewport */}
+            <div
+              className={`relative w-full overflow-hidden h-[min(42vh,280px)] sm:h-[min(46vh,340px)] md:h-auto md:aspect-[4/3] md:min-h-0 ${
+                imageFit === 'cover' && slug === 'bouracka' ? 'bg-[#ebebeb]' : ''
+              }`}
+            >
               <Image
                 src={image}
                 alt={`${title} preview`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
-                className="object-contain group-hover:scale-[1.02] transition-transform duration-300"
-                priority={slug === 'neuron'} // Priority load first project
+                className={`${imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${
+                  imageFit === 'cover' && slug === 'bouracka'
+                    ? 'origin-top scale-[1.05] object-top'
+                    : 'object-center'
+                } ${slug === 'bouracka' && imageFit === 'cover' ? 'group-hover:scale-[1.07]' : 'group-hover:scale-[1.02]'} transition-transform duration-300`}
+                priority={slug === 'chismeapp'}
               />
             </div>
           </div>
