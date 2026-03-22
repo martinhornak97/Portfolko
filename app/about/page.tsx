@@ -113,7 +113,7 @@ export default function AboutPage() {
         <div data-reveal data-delay="400">
           <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">Outside of work</p>
           <p className="text-[20px] text-gray-800 leading-relaxed">
-            I play tennis, box occasionally, and keep a running list of places I want to visi.
+            I play tennis, box occasionally, and keep a running list of places I want to visit.
           </p>
         </div>
 
