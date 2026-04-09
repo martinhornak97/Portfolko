@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { metadata } from "./metadata"
 import { ClientLayout } from "@/components/ClientLayout"
@@ -31,6 +32,7 @@ export default function RootLayout({
           `}
         </Script>
         <ClientLayout>{children}</ClientLayout>
+        <Analytics />
       </body>
     </html>
   )
