@@ -180,7 +180,7 @@ export default function TableOfContents() {
       </div>
 
       {/* Desktop version */}
-      <div className="hidden md:block sticky top-[100px] w-[300px] p-6">
+      <div className="hidden md:block sticky top-[100px] w-full p-0">
         <nav>
           <p className="font-medium mb-4">Summary</p>
           <ul className="space-y-2">
@@ -188,7 +188,7 @@ export default function TableOfContents() {
               <li key={heading.id}>
                 <button
                   onClick={() => scrollToHeading(heading.id)}
-                  className={`text-left transition-colors ${
+                  className={`w-full text-left break-words transition-colors ${
                     activeId === heading.id
                       ? 'text-neutral-900 font-medium'
                       : 'text-neutral-500 hover:text-neutral-800'

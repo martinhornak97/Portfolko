@@ -39,10 +39,10 @@ export default function AboutPage() {
       {/* Opening */}
       <div className="mt-[100px] md:mt-[200px] mb-[60px] md:mb-[100px]" data-reveal>
         <h1>
-          Hi, I'm Martin. I bring clarity into messy systems.
+          I design clarity for complex products.
         </h1>
         <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px] max-w-[700px]">
-          4+ years designing enterprise tools and consumer apps. Currently working full-time on Neuron at Vienna Insurance Group, while co-founding Chisme on the side.
+          I&apos;m a product designer working across enterprise workflows and consumer products. I currently design Neuron at Vienna Insurance Group and co-found Chisme.
         </p>
       </div>
 
@@ -99,21 +99,21 @@ export default function AboutPage() {
         <div data-reveal data-delay="200">
           <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">How I work</p>
           <p className="text-[20px] text-gray-800 leading-relaxed">
-            Most of my work happens behind the scenes, designing internal tools for large companies, mainly in insurance. I've worked on product modelers, tasklists, and dashboards. Tools that help people do their jobs faster and with fewer errors. I care about structure, clarity, and usability.
+            I&apos;m strongest in ambiguous domains: aligning stakeholders, shaping the problem, and designing systems that hold up under edge cases and scale.
           </p>
         </div>
 
         <div data-reveal data-delay="300">
           <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">What makes me different</p>
           <p className="text-[20px] text-gray-800 leading-relaxed">
-            Most designers specialize early. I didn't, and I think that's an advantage. I've designed enterprise platforms used by hundreds of employees, a consumer app with 20K+ monthly users, and everything in between: agency websites, e-commerce flows, mobile tools. Combined with an SEO background, I tend to think about design from the outside in. How things are found, understood, and trusted. Not just how they look.
+            I&apos;ve worked across enterprise, startup, and agency contexts, which helps me balance craft with constraints. I also bring an SEO background. Useful for products that need to be discoverable, legible, and trusted.
           </p>
         </div>
 
         <div data-reveal data-delay="400">
           <p className="text-sm uppercase tracking-wide text-gray-500 mb-4">Outside of work</p>
           <p className="text-[20px] text-gray-800 leading-relaxed">
-            I play tennis, box occasionally, and keep a running list of places I want to visit.
+            Outside work, I play tennis, box occasionally, and travel whenever I can.
           </p>
         </div>
 

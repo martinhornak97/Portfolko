@@ -27,6 +27,13 @@ const caseStudies = [
     image: '/images/neuron.png',
   },
   {
+    id: 'enterprise-design-system',
+    title: 'Enterprise design system: Insurance ecosystem',
+    label: 'Enterprise platform',
+    href: '/projects/enterprise-design-system',
+    image: '/images/enterprise-design-system-cover.png',
+  },
+  {
     id: 'bouracka',
     title: 'Bouracka: Crash reporting',
     label: 'Public service',
@@ -96,7 +103,7 @@ export default function MyWorkPage() {
             My work
           </h1>
           <p className="text-[20px] text-gray-800 leading-relaxed">
-            Selected product design projects.
+            Projects where clarity, constraints, and measurable outcomes mattered.
           </p>
         </div>
       </section>
