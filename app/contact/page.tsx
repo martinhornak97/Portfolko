@@ -60,7 +60,7 @@ export default function ContactPage() {
               <h1 className="text-left">Let's talk</h1>
               <div className="max-w-[900px] text-left" data-reveal data-delay="100">
                 <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
-                  Feel free to reach out – whether it's work, feedback, or collaboration.
+                  If you&apos;re hiring or building a product with complex workflows, I&apos;d love to help.
                 </p>
               </div>
             </>

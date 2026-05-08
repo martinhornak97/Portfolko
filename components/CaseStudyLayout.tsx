@@ -53,15 +53,15 @@ export default function CaseStudyLayout({
       </div>
 
       {/* Content with Floating Summary */}
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-10">
         {/* Summary - floating left on desktop, inline on mobile */}
-        <aside className="md:w-48 w-full md:sticky md:top-32 md:self-start">
+        <aside className="w-full md:w-64 lg:w-72 md:sticky md:top-32 md:self-start md:shrink-0">
           <TableOfContents />
         </aside>
 
         {/* Content */}
         <article id="case-study-content" className="flex-1 max-w-[700px] min-w-0">
-          <div className="prose prose-xl max-w-none prose-headings:scroll-mt-24">
+          <div className="prose prose-xl max-w-none prose-headings:scroll-mt-24 prose-h2:mt-14 prose-h2:mb-5 prose-p:my-5 md:prose-h2:mt-16 md:prose-p:my-6">
             {children}
           </div>
 
