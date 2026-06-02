@@ -26,7 +26,7 @@ export default function BourackaCaseStudy() {
   return (
     <CaseStudyLayout
       title="Bouracka: Crash reporting"
-      role="UX Designer"
+      role="Product Designer"
       impact="Landing page repositioned from campaign awareness to high-stakes entry"
       tools="Figma"
       timeline="2024"

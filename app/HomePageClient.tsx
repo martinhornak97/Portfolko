@@ -39,7 +39,7 @@ export default function HomePageClient() {
     <>
       <section className="py-5 md:py-20 px-4 md:px-20">
         <h1 className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px]">
-          Product designer for complex internal platforms and design systems
+          Senior product designer for complex internal platforms and design systems
         </h1>
         <div className="max-w-[900px] text-left" data-reveal>
           <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">

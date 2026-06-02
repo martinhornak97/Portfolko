@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getSiteUrl } from '@/lib/site';
 
 const description =
-  'UX designer focused on internal tools, design systems, and complex workflows for enterprise and product teams.';
+  'Senior product designer for complex internal platforms and design systems.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),

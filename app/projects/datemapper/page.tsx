@@ -8,9 +8,9 @@ export default function DatemapperCaseStudy() {
     <CaseStudyLayout
       title="DateMapper: Midpoint venues"
       role="Product Designer"
-      impact="Increased user retention and engagement after redesign"
+      impact="+35% session duration. Improved retention and engagement after redesign."
       tools="Figma"
-      timeline="2024"
+      timeline="2024 · Freelance"
       disclaimer="A curated experience for discovering the perfect meet-up spot"
     >
       <div className="space-y-12">
@@ -198,7 +198,7 @@ export default function DatemapperCaseStudy() {
         <div className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Reflection</h2>
           <p className="text-lg leading-relaxed">
-            This project reinforced how well-designed tools can turn real-life challenges into simple interactions. Designing for mobile-first forced clarity and focus. Iterating with users and closely collaborating with founders helped us land on a product that feels meaningful, lightweight, and memorable.
+            This project reinforced how well-designed tools can turn real-life challenges into simple interactions. Designing for mobile-first forced clarity and focus. Iterating with users and closely collaborating with founders helped us land on a product that feels meaningful, lightweight, and memorable, with a measured +35% lift in session duration.
         </p>
       </div>
       
