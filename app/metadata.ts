@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { getSiteUrl } from '@/lib/site';
 
 const description =
-  'UX designer focused on internal tools, design systems, and complex workflows for enterprise and product teams.';
+  'Senior product designer for complex products.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: 'Martin Horňak — UX Designer',
+    default: 'Martin Horňak — Senior Product Designer',
     template: '%s | Martin Horňak',
   },
   description,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en',
     siteName: 'Martin Horňak',
-    title: 'Martin Horňak — UX Designer',
+    title: 'Martin Horňak — Senior Product Designer',
     description,
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Martin Horňak — UX Designer',
+    title: 'Martin Horňak — Senior Product Designer',
     description,
     images: ['/images/chisme-preview.png'],
   },

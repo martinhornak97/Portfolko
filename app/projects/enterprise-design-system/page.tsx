@@ -4,7 +4,7 @@ export default function EnterpriseDesignSystemCaseStudy() {
   return (
     <CaseStudyLayout
       title="Enterprise Design System: Insurance ecosystem"
-      role="Product / UX Designer"
+      role="Senior Product Designer"
       impact="15-20% faster delivery and 40-50% less UI inconsistency/rework"
       tools="Figma Variables, Component architecture, Cross-functional collaboration"
       timeline="01/2026 - 03/2026"
@@ -42,6 +42,9 @@ export default function EnterpriseDesignSystemCaseStudy() {
             I led end-to-end delivery of a multi-brand design system for a large insurance ecosystem, with claims reporting as the primary use case. The system had to support two brands, desktop and mobile, and complex internal workflows built around forms.
           </p>
           <p className="text-lg leading-relaxed">
+            This design system underpins the Neuron platform described in the Neuron case study, supporting two brands across the insurance ecosystem.
+          </p>
+          <p className="text-lg leading-relaxed">
             The design system was built retrospectively while teams were already shipping. The core challenge was introducing structure and consistency without slowing active delivery.
           </p>
         </section>
@@ -49,7 +52,7 @@ export default function EnterpriseDesignSystemCaseStudy() {
         <section className="space-y-6">
           <h2 className="text-2xl font-semibold">Role and scope</h2>
           <p className="text-lg leading-relaxed">
-            As Product / UX Designer, I owned delivery decisions across variable architecture, form patterns, component composition, and responsive variants. I worked directly with engineering and analysts to keep design decisions implementable in production conditions.
+            As Senior Product Designer, I owned delivery decisions across variable architecture, form patterns, component composition, and responsive variants. I worked directly with engineering and analysts to keep design decisions implementable in production conditions.
           </p>
           <p className="text-lg leading-relaxed">
             I focused on reducing ambiguity in handoff and minimizing rework, while building a system teams could scale over time.

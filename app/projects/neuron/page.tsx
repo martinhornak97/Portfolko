@@ -4,10 +4,10 @@ export default function NeuronCaseStudy() {
   return (
     <CaseStudyLayout
       title="Neuron: Insurance backoffice"
-      role="Product Designer"
+      role="Senior Product Designer"
       impact="3 of 7 core domains, greenfield product"
       tools="Figma, Token Studio"
-      timeline="01/2024 - Present"
+      timeline="01/2024 – Present"
       disclaimer="Due to NDA, visuals cannot be shown."
     >
       <div className="space-y-12">

@@ -31,7 +31,7 @@ export function Footer() {
           {/* Left side - CTA */}
           <div className="space-y-4">
             <p className="meta-text text-left">
-              Looking to improve your internal tools or workflows?
+              Looking for a senior product designer?
             </p>
             <Link href="/contact">
               <h2 className="text-7xl md:text-8xl lg:text-[10rem] font-extrabold text-left leading-none opacity-10 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
@@ -57,14 +57,6 @@ export function Footer() {
                 className="cta-text block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] border-black hover:bg-black hover:text-white transition-all duration-200"
               >
                 LinkedIn
-              </a>
-              <a 
-                href="https://dribbble.com/martinhornak"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-text block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] border-black hover:bg-black hover:text-white transition-all duration-200"
-              >
-                Dribbble
               </a>
             </div>
 

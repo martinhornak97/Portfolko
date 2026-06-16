@@ -8,10 +8,10 @@ export default function ChismeCaseStudyPage() {
   return (
     <CaseStudyLayout
       title="Chisme: Women's meetups"
-      role="Co-Founder & Product Designer"
+      role="Co-Founder & Senior Product Designer"
       impact="20K+ monthly active users, 4.7★ rating, subscription revenue"
       tools="Figma, Cursor, RevenueCat"
-      timeline="2025 – Present"
+      timeline="Jun 2025 – Present"
       disclaimer="Product details focus on UX, product design, and high-level outcomes."
     >
       <div className="space-y-12">
@@ -33,7 +33,7 @@ export default function ChismeCaseStudyPage() {
             Before a single line of code was written, we validated the idea with Figma prototypes shared on Instagram and TikTok. We set a target of 100 pre-registrations in the first month. We got 85. Close enough that we decided to put money into ads to test whether real demand existed. Two weeks later we had 200 pre-registrations. We started building.
           </p>
           <p className="text-lg leading-relaxed">
-            Chisme launched on October 20, 2024. Within four months, it reached 20,000 monthly active users, a 4.7 App Store rating, and subscription-based revenue.
+            Chisme launched on October 20, 2025. Within four months, it reached 20,000 monthly active users, a 4.7 App Store rating, and subscription-based revenue.
           </p>
         </section>
 
