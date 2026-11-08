@@ -44,14 +44,14 @@ export default function ContactPage() {
     <section className="py-5 md:py-20 px-4 md:px-20">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start">
         
-        {/* Nadpis + podnadpis */}
+        {/* Heading + subheading */}
         <div className="mt-[100px] md:mt-[200px] mb-[100px] md:mb-[200px] md:mb-0" data-reveal>
           {isSubmitted ? (
             <>
               <h1 className="text-left">Looking forward to our conversation</h1>
               <div className="max-w-[900px] text-left" data-reveal data-delay="100">
                 <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
-                  Thanks for your message — I'll be in touch shortly so we can discuss next steps.
+                  Thanks for your message - I'll be in touch shortly so we can discuss next steps.
                 </p>
               </div>
             </>
@@ -60,14 +60,17 @@ export default function ContactPage() {
               <h1 className="text-left">Let's talk</h1>
               <div className="max-w-[900px] text-left" data-reveal data-delay="100">
                 <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
-                  If you&apos;re hiring or building a product with complex workflows, I&apos;d love to help.
+                  If you&apos;re building a product with complex workflows, I&apos;d love to help.
+                </p>
+                <p className="text-base text-gray-600 leading-relaxed mt-4 max-w-[560px]">
+                  I keep a few hours a week for side projects. Best fit: short, well-scoped work like design system audits, design reviews, or MVP design. Async-friendly, CET.
                 </p>
               </div>
             </>
           )}
         </div>
 
-        {/* Formulár alebo Success tlačítko */}
+        {/* Form or success button */}
         <div className="md:mt-[200px] md:max-w-md md:w-full flex justify-center md:justify-end" data-reveal data-delay="200">
           <div className="min-h-[450px] w-full max-w-md">
             {isSubmitted ? (

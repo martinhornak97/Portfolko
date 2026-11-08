@@ -5,7 +5,7 @@ A clean, minimal personal portfolio built with Next.js 13+ (App Router), TypeScr
 ## Features
 
 - **Modern Stack**: Next.js 13+ with App Router, TypeScript, Tailwind CSS
-- **Clean Design**: Minimal, responsive design inspired by [hansonwu.com](https://www.hansonwu.com/)
+- **Clean Design**: Minimal, responsive design
 - **Performance-First**: Optimized for speed and SEO
 - **Accessibility**: Semantic HTML and WCAG-compliant markup
 - **Type-Safe**: Full TypeScript support throughout
@@ -27,19 +27,16 @@ A clean, minimal personal portfolio built with Next.js 13+ (App Router), TypeScr
 ├── app/
 │   ├── about/page.tsx           # About page
 │   ├── contact/page.tsx         # Contact page
-│   ├── projects/[slug]/page.tsx # Dynamic project pages
+│   ├── work/page.tsx            # Case study overview
+│   ├── projects/<name>/         # Individual case studies
+│   ├── metadata.ts              # Site-wide metadata
 │   ├── globals.css              # Global styles
 │   ├── layout.tsx               # Root layout
 │   └── page.tsx                 # Homepage
-├── components/
-│   ├── Header.tsx               # Navigation header
-│   ├── Footer.tsx               # Site footer
-│   ├── Layout.tsx               # Main layout wrapper
-│   ├── ProjectCard.tsx          # Project display component
-│   └── index.ts                 # Component exports
-├── data/
-│   └── projects.ts              # Project data and types
-└── public/                      # Static assets
+├── components/                  # Header, Footer, case study layout, sections
+├── hooks/                       # Scroll reveal, anchor links
+├── lib/                         # Site URL, social metadata helpers
+└── public/                      # Static assets (images, logos, CV)
 ```
 
 ## Getting Started
@@ -67,22 +64,7 @@ Update the following files with your information:
 - **Navigation branding**: `components/Header.tsx`
 
 ### Projects
-Edit `data/projects.ts` to add your projects:
-
-```typescript
-export const projects: Project[] = [
-  {
-    id: '1',
-    title: 'Your Project Title',
-    description: 'Brief project description',
-    slug: 'project-url-slug',
-    link: 'https://your-project-url.com',
-    technologies: ['React', 'TypeScript', 'Tailwind'],
-    featured: true, // Show on homepage
-  },
-  // Add more projects...
-];
-```
+Each case study is its own route in `app/projects/<name>/` (`page.tsx` + `layout.tsx` for metadata). List it on `app/work/page.tsx`.
 
 ### Styling
 - **Colors**: Update Tailwind classes in components

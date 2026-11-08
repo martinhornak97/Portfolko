@@ -25,7 +25,7 @@ export default function BourackaCaseStudy() {
 
   return (
     <CaseStudyLayout
-      title="Bouracka: Crash reporting"
+      title="Bouračka: Crash reporting"
       role="Product Designer"
       impact="Landing page repositioned from campaign awareness to high-stakes entry"
       tools="Figma"
@@ -39,7 +39,7 @@ export default function BourackaCaseStudy() {
             Context
           </h2>
           <p className="text-lg leading-relaxed">
-            Until Bouracka.cz, filing a car accident report in the Czech Republic meant paperwork. Physical forms, sent to your insurance company by hand. Bouracka replaced that with a multi-step digital flow that outputs a completed document ready to submit. No paper, no ambiguity.
+            Until Bouračka.cz, filing a car accident report in the Czech Republic meant paperwork. Physical forms, sent to your insurance company by hand. Bouračka replaced that with a multi-step digital flow that outputs a completed document ready to submit. No paper, no ambiguity.
           </p>
           <p className="text-lg leading-relaxed">
             Because nothing like it existed before, the original landing page had one job: explain that this is real and that it works. It was built for a marketing campaign aimed at awareness. When the campaign ended, the page stayed. And the people arriving on it were no longer curious bystanders. They were drivers who had just had an accident and needed to do something about it right now.
@@ -97,7 +97,7 @@ export default function BourackaCaseStudy() {
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
                       src="/bouracka/homepage-before.png"
-                      alt="Bouracka homepage before the restructuring"
+                      alt="Bouračka homepage before the restructuring"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
                       className="object-cover object-top bg-gray-50"
@@ -121,7 +121,7 @@ export default function BourackaCaseStudy() {
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
                       src="/bouracka/homepage-after.png"
-                      alt="Bouracka homepage after restructuring for real incident usage"
+                      alt="Bouračka homepage after restructuring for real incident usage"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
                       className="object-cover object-top bg-gray-50"
@@ -147,7 +147,7 @@ export default function BourackaCaseStudy() {
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
                       src="/bouracka/mobile-before.png"
-                      alt="Bouracka mobile homepage before the restructuring"
+                      alt="Bouračka mobile homepage before the restructuring"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
                       className="object-cover object-top bg-gray-50"
@@ -171,7 +171,7 @@ export default function BourackaCaseStudy() {
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
                       src="/bouracka/mobile-after.png"
-                      alt="Bouracka mobile homepage after restructuring for real incident usage"
+                      alt="Bouračka mobile homepage after restructuring for real incident usage"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
                       className="object-cover object-top bg-gray-50"

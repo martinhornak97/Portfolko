@@ -45,7 +45,7 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex flex-col gap-4">
               <a 
-                href="mailto:hello@martinhornak.com"
+                href="mailto:martin.hornak1997@gmail.com"
                 className="cta-text block w-full lg:w-auto text-center md:px-12 py-4 border rounded-[3rem] border-black hover:bg-black hover:text-white transition-all duration-200"
               >
                 Email
@@ -74,10 +74,7 @@ export function Footer() {
                   Martin Horňak
                 </a>
               </p>
-              <p className="mt-4 meta-text">
-                Available for remote work worldwide.
-              </p>
-              <p className="meta-text">© 2026</p>
+              <p className="mt-4 meta-text">© 2026</p>
             </div>
           </div>
         </div>
