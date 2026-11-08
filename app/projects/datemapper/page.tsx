@@ -216,7 +216,7 @@ export default function DatemapperCaseStudy() {
             </p>
           </blockquote>
           <footer className="pt-4 text-sm font-medium text-right text-foreground">
-            — Joshua Lever, CEO of DateMapper
+            - Joshua Lever, CEO of DateMapper
           </footer>
         </section>
     </div>

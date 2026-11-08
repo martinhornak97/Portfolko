@@ -7,7 +7,7 @@ export const metadata: Metadata = pageMetadata({
     'Senior Product Designer working on enterprise insurance platforms and a women-first social app. Background in UX, internal tools, and design systems.',
   path: '/about',
   ogImagePath: '/images/neuron.png',
-  ogImageAlt: 'Martin Horňak — about',
+  ogImageAlt: 'Martin Horňak - about',
 });
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {

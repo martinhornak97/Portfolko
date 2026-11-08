@@ -20,14 +20,14 @@ export default function HomePageClient() {
     {
       id: '0',
       title: 'Neuron: Insurance backoffice',
-      description: 'Modernizing internal software used by thousands of employees.',
+      description: 'Modernizing internal software used daily by 300+ employees.',
       slug: 'neuron',
       image: '/images/neuron.png',
       label: 'Enterprise platform',
     },
     {
       id: 'bouracka',
-      title: 'Bouracka: Crash reporting',
+      title: 'Bouračka: Crash reporting',
       description: 'Landing entry for a CKP-backed digital accident reporting service.',
       slug: 'bouracka',
       image: '/bouracka/bouracka-cover.png',
@@ -42,8 +42,8 @@ export default function HomePageClient() {
           Senior product designer for complex products
         </h1>
         <div className="max-w-[900px] text-left" data-reveal>
-          <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
-            I&apos;ve designed complex insurance platforms and founder-led consumer apps. In both, the real work is making something clear and usable when the constraints are real and not everyone wants the same thing.
+          <p className="max-w-[700px] text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
+            I work on products where mistakes are expensive. Most of my focus is on enterprise platforms in regulated industries, and alongside that I build consumer apps from scratch. In both, my job is to make difficult decisions feel simpler.
           </p>
         </div>
       </section>

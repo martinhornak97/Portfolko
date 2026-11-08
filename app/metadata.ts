@@ -7,7 +7,7 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: 'Martin Horňak — Senior Product Designer',
+    default: 'Martin Horňak - Senior Product Designer',
     template: '%s | Martin Horňak',
   },
   description,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en',
     siteName: 'Martin Horňak',
-    title: 'Martin Horňak — Senior Product Designer',
+    title: 'Martin Horňak - Senior Product Designer',
     description,
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Martin Horňak — Senior Product Designer',
+    title: 'Martin Horňak - Senior Product Designer',
     description,
     images: ['/images/chisme-preview.png'],
   },

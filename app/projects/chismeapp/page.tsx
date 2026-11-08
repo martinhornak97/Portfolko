@@ -9,9 +9,9 @@ export default function ChismeCaseStudyPage() {
     <CaseStudyLayout
       title="Chisme: Women's meetups"
       role="Co-Founder & Senior Product Designer"
-      impact="20K+ monthly active users, 4.7★ rating, subscription revenue"
+      impact="50K+ monthly active users, 4.8★ rating, subscription revenue"
       tools="Figma, Cursor, RevenueCat"
-      timeline="Jun 2025 – Present"
+      timeline="Jun 2025 - Present"
       disclaimer="Product details focus on UX, product design, and high-level outcomes."
     >
       <div className="space-y-12">
@@ -33,7 +33,7 @@ export default function ChismeCaseStudyPage() {
             Before a single line of code was written, we validated the idea with Figma prototypes shared on Instagram and TikTok. We set a target of 100 pre-registrations in the first month. We got 85. Close enough that we decided to put money into ads to test whether real demand existed. Two weeks later we had 200 pre-registrations. We started building.
           </p>
           <p className="text-lg leading-relaxed">
-            Chisme launched on October 20, 2025. Within four months, it reached 20,000 monthly active users, a 4.7 App Store rating, and subscription-based revenue.
+            Chisme launched on October 20, 2025. Within four months, it reached 20,000 monthly active users. It has since grown to 50,000+, with a 4.8 App Store rating and subscription-based revenue.
           </p>
         </section>
 
@@ -47,7 +47,7 @@ export default function ChismeCaseStudyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="flex flex-col gap-1 rounded-lg border border-gray-100 bg-gray-50/60 px-4 py-4 md:px-5 md:py-5">
               <div className="text-4xl md:text-5xl font-semibold leading-tight text-gray-900">
-                20K+
+                50K+
               </div>
               <div className="text-sm md:text-base text-gray-600">
                 Monthly active users
@@ -66,7 +66,7 @@ export default function ChismeCaseStudyPage() {
             <div className="flex flex-col gap-1 rounded-lg border border-gray-100 bg-gray-50/60 px-4 py-4 md:px-5 md:py-5">
               <div className="flex items-center gap-1">
                 <span className="text-4xl md:text-5xl font-semibold leading-tight text-gray-900">
-                  4.7
+                  4.8
                 </span>
                 <span className="text-2xl md:text-3xl font-semibold leading-tight text-gray-900">
                   ★
@@ -179,7 +179,7 @@ export default function ChismeCaseStudyPage() {
                 <BeforeAfterComparison
                   beforeImage="/chisme/iterations/Map discovery - before.png"
                   afterImage="/chisme/iterations/Map discovery - after.png"
-                  alt="Map discovery – clustering"
+                  alt="Map discovery - clustering"
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function ChismeCaseStudyPage() {
                 <BeforeAfterComparison
                   beforeImage="/chisme/iterations/Messages - before.png"
                   afterImage="/chisme/iterations/Messages - after.png"
-                  alt="Conversations – tab structure"
+                  alt="Conversations - tab structure"
                 />
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function ChismeCaseStudyPage() {
                 <BeforeAfterComparison
                   beforeImage="/chisme/iterations/Notifications - before.png"
                   afterImage="/chisme/iterations/Notifications - after.png"
-                  alt="Notifications – persistent card"
+                  alt="Notifications - persistent card"
                 />
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/onboarding-step-1.png"
-                        alt="Onboarding – enter name"
+                        alt="Onboarding - enter name"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -277,7 +277,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/onboarding-step-2.png"
-                        alt="Onboarding – verify age"
+                        alt="Onboarding - verify age"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -301,7 +301,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/onboarding-step-3.png"
-                        alt="Onboarding – set location"
+                        alt="Onboarding - set location"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -325,7 +325,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/onboarding-step-4.png"
-                        alt="Onboarding – selfie verification"
+                        alt="Onboarding - selfie verification"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -349,7 +349,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/onboarding-step-5.png"
-                        alt="Onboarding – verification pending"
+                        alt="Onboarding - verification pending"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -381,7 +381,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/people-flow-step-1.png"
-                        alt="People discovery – open map-based discovery"
+                        alt="People discovery - open map-based discovery"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -405,7 +405,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/people-flow-step-2.png"
-                        alt="People discovery – adjust distance and interests"
+                        alt="People discovery - adjust distance and interests"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -429,7 +429,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/people-flow-step-3.png"
-                        alt="People discovery – browse people nearby"
+                        alt="People discovery - browse people nearby"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -453,7 +453,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/people-flow-step-4.png"
-                        alt="People discovery – open profile details"
+                        alt="People discovery - open profile details"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -477,7 +477,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/people-flow-step-5.png"
-                        alt="People discovery – start a conversation"
+                        alt="People discovery - start a conversation"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -509,7 +509,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/plan-flow-step-1.png"
-                        alt="Plan creation – discover nearby plans"
+                        alt="Plan creation - discover nearby plans"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -533,7 +533,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/plan-flow-step-2.png"
-                        alt="Plan creation – create a new plan"
+                        alt="Plan creation - create a new plan"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -557,7 +557,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/plan-flow-step-3.png"
-                        alt="Plan creation – choose location"
+                        alt="Plan creation - choose location"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -581,7 +581,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/plan-flow-step-4.png"
-                        alt="Plan creation – publish the plan"
+                        alt="Plan creation - publish the plan"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -605,7 +605,7 @@ export default function ChismeCaseStudyPage() {
                     <div className="flex justify-center">
                       <Image
                         src="/chisme/plan-flow-step-5.png"
-                        alt="Plan creation – start conversation"
+                        alt="Plan creation - start conversation"
                         width={220}
                         height={465}
                         className="w-[260px] sm:w-[220px] h-auto aspect-[9/19] rounded-xl object-contain"
@@ -638,10 +638,10 @@ export default function ChismeCaseStudyPage() {
             Growth &amp; metrics
           </h2>
           <p className="text-lg leading-relaxed">
-            Chisme reached 20,000 monthly active users within four months of launch, through a combination of organic TikTok and Instagram content and Meta advertising. More than 300 active plans are currently running in Spain.
+            Chisme reached 20,000 monthly active users within four months of launch and has since grown to 50,000+, through a combination of organic TikTok and Instagram content and Meta advertising. More than 300 active plans are currently running in Spain.
           </p>
           <ul className="list-disc pl-5 space-y-1 text-lg leading-relaxed">
-            <li>4.7 App Store (500 reviews)</li>
+            <li>4.8 App Store</li>
             <li>4.5 Google Play (350 reviews)</li>
           </ul>
           <p className="text-lg leading-relaxed">

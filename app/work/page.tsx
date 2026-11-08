@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata({
     'Selected UX and product design work: enterprise platforms, founder-led apps, public-sector tools, and product concepts.',
   path: '/work',
   ogImagePath: '/bouracka/bouracka-cover.png',
-  ogImageAlt: 'Case studies — selected design work',
+  ogImageAlt: 'Case studies - selected design work',
 });
 
 const caseStudies = [
@@ -35,7 +35,7 @@ const caseStudies = [
   },
   {
     id: 'bouracka',
-    title: 'Bouracka: Crash reporting',
+    title: 'Bouračka: Crash reporting',
     label: 'Public service',
     href: '/projects/bouracka',
     image: '/bouracka/bouracka-cover.png',
@@ -65,6 +65,11 @@ const trustedLogos: {
   imgClassName?: string;
 }[] = [
   {
+    name: 'Sanofi',
+    src: '/logos/sanofi-logo.svg',
+    alt: 'Sanofi',
+  },
+  {
     name: 'Vienna Insurance Group',
     src: '/logos/vig-logo.svg',
     alt: 'Vienna Insurance Group',
@@ -75,20 +80,20 @@ const trustedLogos: {
     alt: 'Kooperativa',
   },
   {
+    name: 'Trask',
+    src: '/logos/trask-logo.jpg',
+    alt: 'Trask',
+    imgClassName: 'scale-[1.48] md:scale-[1.55] origin-center',
+  },
+  {
     name: 'GetFound',
     src: '/logos/getfound-logo.svg',
     alt: 'GetFound',
   },
   {
-    name: 'Bouracka',
+    name: 'Bouračka',
     src: '/logos/bouracka-logo.svg',
-    alt: 'Bouracka.cz',
-  },
-  {
-    name: 'Trask',
-    src: '/logos/trask-logo.jpg',
-    alt: 'Trask',
-    imgClassName: 'scale-[1.48] md:scale-[1.55] origin-center',
+    alt: 'Bouračka.cz',
   },
 ];
 
@@ -190,7 +195,7 @@ export default function MyWorkPage() {
           <p className="text-sm uppercase tracking-wide text-gray-500">
             Trusted by teams at
           </p>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 md:gap-5">
             {trustedLogos.map((logo) => (
               <div
                 key={logo.name}

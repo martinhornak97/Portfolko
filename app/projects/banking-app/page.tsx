@@ -15,7 +15,7 @@ export default function BankingAppCaseStudy() {
       role="UX/UI Designer"
       impact="Personal Project"
       tools="Figma"
-      timeline="2023"
+      timeline="2021"
       disclaimer="A personal project focused on redesigning a mobile banking app for improved usability and visual clarity."
     >
       <div className="space-y-12">
