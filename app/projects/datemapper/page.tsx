@@ -91,7 +91,7 @@ export default function DatemapperCaseStudy() {
               <p className="text-xl">Simple layout with a short explanation and clear call to action</p>
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/DM LP.png"
+                  src="/images/DM LP.webp"
                   alt="DateMapper landing page"
                   fill
                   className="object-contain rounded-xl"
@@ -107,7 +107,7 @@ export default function DatemapperCaseStudy() {
               <p className="text-xl">Input fields for addresses, category filters, and pre-filled cards with trending venues and events</p>
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/DM HP.png"
+                  src="/images/DM HP.webp"
                   alt="DateMapper home page"
                   fill
                   className="object-contain rounded-xl"
@@ -123,7 +123,7 @@ export default function DatemapperCaseStudy() {
               <p className="text-xl">Each card includes images, description, hours, distance to each user, and call to action</p>
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/DM Results.png"
+                  src="/images/DM Results.webp"
                   alt="DateMapper results page"
                   fill
                   className="object-contain rounded-xl"
@@ -139,7 +139,7 @@ export default function DatemapperCaseStudy() {
               <p className="text-xl">Interactive map with user markers, midpoint pin, and clickable venue icons</p>
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/DM map.png"
+                  src="/images/DM map.webp"
                   alt="DateMapper map view"
                   fill
                   className="object-contain rounded-xl"
@@ -155,7 +155,7 @@ export default function DatemapperCaseStudy() {
               <p className="text-xl">Simple form with labeled fields for submitting new locations</p>
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/DM add.png"
+                  src="/images/DM add.webp"
                   alt="DateMapper add venue page"
                   fill
                   className="object-contain rounded-xl"

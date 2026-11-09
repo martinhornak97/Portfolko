@@ -1,42 +1,56 @@
+// Generates .webp siblings for PNG/JPG images used on the site.
+// Usage: node scripts/optimize-images.js [--force]
+// Originals are kept (used for Open Graph previews, which need PNG/JPG).
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputDir = path.join(process.cwd(), 'public/images');
-const outputDir = path.join(process.cwd(), 'public/images');
+const ROOT = path.join(process.cwd(), 'public');
+const DIRS = ['images', 'chisme', 'bouracka', 'cv'];
+const MAX_WIDTH = 2000; // ~1000px display width at 2x
+const force = process.argv.includes('--force');
 
-// Ensure output directory exists
-if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir, { recursive: true });
+function walk(dir) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return walk(full);
+    return /\.(jpe?g|png)$/i.test(entry.name) ? [full] : [];
+  });
 }
 
-// Get all image files
-const imageFiles = fs.readdirSync(inputDir).filter(file => 
-  /\.(jpg|jpeg|png)$/i.test(file)
-);
+async function main() {
+  const files = DIRS.map((d) => path.join(ROOT, d))
+    .filter((d) => fs.existsSync(d))
+    .flatMap(walk);
 
-// Process each image
-imageFiles.forEach(async file => {
-  const inputPath = path.join(inputDir, file);
-  const outputPath = path.join(outputDir, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'));
-  
-  try {
-    // Get image metadata
-    const metadata = await sharp(inputPath).metadata();
-    
-    // Calculate new dimensions (max 2x display size)
-    const maxWidth = 2000; // 1000px display * 2 for retina
-    const ratio = metadata.width > maxWidth ? maxWidth / metadata.width : 1;
-    const newWidth = Math.round(metadata.width * ratio);
-    const newHeight = Math.round(metadata.height * ratio);
+  let before = 0;
+  let after = 0;
 
-    await sharp(inputPath)
-      .resize(newWidth, newHeight)
+  for (const input of files) {
+    const output = input.replace(/\.(jpe?g|png)$/i, '.webp');
+    if (!force && fs.existsSync(output)) continue;
+
+    const { width } = await sharp(input).metadata();
+    await sharp(input)
+      .resize({ width: Math.min(width, MAX_WIDTH), withoutEnlargement: true })
       .webp({ quality: 80 })
-      .toFile(outputPath);
+      .toFile(output);
 
-    console.log(`Converted ${file} to WebP (${newWidth}x${newHeight})`);
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error);
+    const a = fs.statSync(input).size;
+    const b = fs.statSync(output).size;
+    before += a;
+    after += b;
+    console.log(
+      `${path.relative(ROOT, input)}: ${(a / 1024).toFixed(0)}KB -> ${(b / 1024).toFixed(0)}KB`
+    );
   }
-}); 
+
+  console.log(
+    `\nDone. ${(before / 1048576).toFixed(1)}MB -> ${(after / 1048576).toFixed(1)}MB`
+  );
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Self-initiated mobile banking app redesign: clearer hierarchy, navigation, and flows for a major retail bank (concept project).',
   path: '/projects/banking-app',
-  ogImagePath: '/images/vub-preview.png',
+  ogImagePath: '/og/banking-app.png',
   ogImageAlt: 'VÚB banking app redesign',
 });
 

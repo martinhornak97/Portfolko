@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Senior Product Designer working on enterprise insurance platforms and a women-first social app. Background in UX, internal tools, and design systems.',
   path: '/about',
-  ogImagePath: '/images/neuron.png',
+  ogImagePath: '/og/about.png',
   ogImageAlt: 'Martin Horňak - about',
 });
 

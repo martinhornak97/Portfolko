@@ -174,7 +174,7 @@ export default function AboutPage() {
             <div className="relative w-[100px] md:w-[190px] aspect-[1/1.3] shrink-0">
               <div className="absolute inset-0 overflow-hidden bg-white border border-black/10 shadow-[0_6px_20px_rgba(0,0,0,0.10)] -rotate-3 motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out group-hover:rotate-0 group-hover:-translate-y-2 group-hover:shadow-[0_18px_40px_rgba(0,0,0,0.18)] group-focus-visible:rotate-0">
                 <Image
-                  src="/cv/cv-preview.jpg"
+                  src="/cv/cv-preview.webp"
                   alt="Preview of Martin Horňak's CV"
                   fill
                   sizes="(min-width: 768px) 190px, 100px"
