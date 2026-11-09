@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import TableOfContents from './TableOfContents'
+import NextCaseStudy from './NextCaseStudy'
 
 interface CaseStudyLayoutProps {
   title: string
@@ -22,9 +23,17 @@ export default function CaseStudyLayout({
   children
 }: CaseStudyLayoutProps) {
   return (
-    <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 md:py-32 case-study">
+    <>
+    <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-12 pb-16 md:pt-32 md:pb-24 case-study">
       {/* Header */}
       <div className="max-w-[700px] mx-auto mb-8 md:mb-16">
+        <Link
+          href="/work"
+          className="group mb-6 md:mb-10 inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-black"
+        >
+          <span aria-hidden="true" className="transition-transform duration-200 group-hover:-translate-x-1">←</span>
+          All work
+        </Link>
         <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-4 md:mb-8">
           {title}
         </h1>
@@ -64,17 +73,10 @@ export default function CaseStudyLayout({
           <div className="prose prose-xl max-w-none prose-headings:scroll-mt-24 prose-h2:mt-14 prose-h2:mb-5 prose-p:my-5 md:prose-h2:mt-16 md:prose-p:my-6">
             {children}
           </div>
-
-          <div className="mt-16">
-            <Link 
-              href="/" 
-              className="cta-text block hover:opacity-70 transition-opacity"
-            >
-              ← Back to homepage
-            </Link>
-          </div>
         </article>
       </div>
     </div>
+    <NextCaseStudy />
+    </>
   )
 } 
