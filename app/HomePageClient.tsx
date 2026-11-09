@@ -65,12 +65,15 @@ export default function HomePageClient() {
         </div>
       ))}
 
-      <div className="px-4 md:px-20 mt-4 mb-8" data-reveal data-delay="350">
+      <div className="px-4 md:px-20 mt-8 md:mt-12 mb-12 md:mb-16 flex justify-center" data-reveal data-delay="350">
         <Link
           href="/work"
-          className="text-sm md:text-base text-gray-700 hover:text-black hover:underline"
+          className="group inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-2.5 text-sm md:text-base font-medium text-gray-900 transition-colors hover:border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
         >
-          View all my work →
+          View all my work
+          <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
+            →
+          </span>
         </Link>
       </div>
 

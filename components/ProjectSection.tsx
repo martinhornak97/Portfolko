@@ -8,6 +8,8 @@ interface ProjectSectionProps {
   label?: string;
   /** `cover` fills the frame (may crop sides); default `contain` shows full image. */
   imageFit?: 'contain' | 'cover';
+  /** Text of the call to action under the title. */
+  ctaLabel?: string;
 }
 
 export function ProjectSection({
@@ -16,6 +18,7 @@ export function ProjectSection({
   image,
   label,
   imageFit = 'contain',
+  ctaLabel = 'Read more',
 }: ProjectSectionProps) {
   return (
     <div className="w-full bg-white">
@@ -56,7 +59,7 @@ export function ProjectSection({
             )}
             <h2 className="mb-1 md:mb-2 break-words group-hover:text-gray-600 transition-colors">{title}</h2>
             <span className="cta-text mt-3 md:mt-6 inline-block group-hover:underline group-hover:text-black transition-all">
-              Read more →
+              {ctaLabel} →
             </span>
           </div>
         </Link>
