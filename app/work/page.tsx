@@ -7,7 +7,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Selected UX and product design work: enterprise platforms, founder-led apps, public-sector tools, and product concepts.',
   path: '/work',
-  ogImagePath: '/bouracka/bouracka-cover.png',
+  ogImagePath: '/og/work.png',
   ogImageAlt: 'Case studies - selected design work',
 });
 
@@ -17,42 +17,42 @@ const caseStudies = [
     title: "Chisme: Women's meetups",
     label: 'Founder project',
     href: '/projects/chismeapp',
-    image: '/images/chisme-preview.png',
+    image: '/images/chisme-preview.webp',
   },
   {
     id: 'neuron',
     title: 'Neuron: Insurance backoffice',
     label: 'Enterprise platform',
     href: '/projects/neuron',
-    image: '/images/neuron.png',
+    image: '/images/neuron.webp',
   },
   {
     id: 'enterprise-design-system',
     title: 'Enterprise design system: Insurance ecosystem',
     label: 'Enterprise platform',
     href: '/projects/enterprise-design-system',
-    image: '/images/enterprise-design-system-cover.png',
+    image: '/images/enterprise-design-system-cover.webp',
   },
   {
     id: 'bouracka',
     title: 'Bouračka: Crash reporting',
     label: 'Public service',
     href: '/projects/bouracka',
-    image: '/bouracka/bouracka-cover.png',
+    image: '/bouracka/bouracka-cover.webp',
   },
   {
     id: 'datemapper',
     title: 'DateMapper: Midpoint venues',
     label: 'Startup project',
     href: '/projects/datemapper',
-    image: '/images/datemapper-cover.jpg',
+    image: '/images/datemapper-cover.webp',
   },
   {
     id: 'banking-app',
     title: 'VÚB: Retail banking',
     label: 'Personal project',
     href: '/projects/banking-app',
-    image: '/images/vub-preview.png',
+    image: '/images/vub-preview.webp',
   },
 ];
 

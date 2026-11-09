@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Landing entry UX for a CKP-backed digital accident reporting service - repositioning the homepage for real incident usage.',
   path: '/projects/bouracka',
-  ogImagePath: '/bouracka/bouracka-cover.png',
+  ogImagePath: '/og/bouracka.png',
   ogImageAlt: 'Bouračka.cz case study',
 });
 

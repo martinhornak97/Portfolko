@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { getSiteUrl } from '@/lib/site'
 
-const defaultOgImage = '/images/chisme-preview.png'
+const defaultOgImage = '/og/home.png'
 
 function ogImage(path: string, alt: string) {
   const base = getSiteUrl()

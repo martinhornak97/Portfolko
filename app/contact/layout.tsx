@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Get in touch about internal tools, design systems, UX for complex workflows, or collaboration opportunities.',
   path: '/contact',
-  ogImagePath: '/images/chisme-preview.png',
+  ogImagePath: '/og/contact.png',
   ogImageAlt: 'Contact Martin Horňak',
 });
 

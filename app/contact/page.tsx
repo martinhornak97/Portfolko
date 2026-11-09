@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { AvailabilityPill } from '@/components/AvailabilityPill';
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [isSending, setIsSending] = useState(false);
   
   useScrollReveal();
 
@@ -19,7 +21,10 @@ export default function ContactPage() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
-    
+    if (isSending) return;
+    setError('');
+    setIsSending(true);
+
     try {
       const response = await fetch('https://formspree.io/f/mkgbvpky', {
         method: 'POST',
@@ -36,7 +41,9 @@ export default function ContactPage() {
         throw new Error('Something went wrong');
       }
     } catch {
-      setError('Something went wrong. Please try again later.');
+      setError('error');
+    } finally {
+      setIsSending(false);
     }
   }
 
@@ -57,13 +64,16 @@ export default function ContactPage() {
             </>
           ) : (
             <>
-              <h1 className="text-left">Let's talk</h1>
+              <div className="relative">
+                <AvailabilityPill />
+                <h1 className="text-left">Let's talk</h1>
+              </div>
               <div className="max-w-[900px] text-left" data-reveal data-delay="100">
                 <p className="text-[20px] text-gray-800 leading-relaxed mt-[25px] md:mt-[50px]">
                   If you&apos;re building a product with complex workflows, I&apos;d love to help.
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed mt-4 max-w-[560px]">
-                  I keep a few hours a week for side projects. Best fit: short, well-scoped work like design system audits, design reviews, or MVP design. Async-friendly, CET.
+                  Best fit: design system audits, design reviews, or MVP design. A few hours a week, CET.
                 </p>
               </div>
             </>
@@ -101,10 +111,25 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 w-full">
                 {error && (
-                  <div className="bg-red-50 text-red-800 px-4 py-3 rounded-md">
-                    {error}
+                  <div role="alert" className="bg-red-50 text-red-800 px-4 py-3 rounded-md">
+                    Something went wrong. Please try again, or email me directly at{' '}
+                    <a href="mailto:martin.hornak1997@gmail.com" className="underline">
+                      martin.hornak1997@gmail.com
+                    </a>
+                    .
                   </div>
                 )}
+
+                <input type="hidden" name="_subject" value="New message from martinhornak.com" />
+                {/* Honeypot: Formspree drops submissions where this is filled */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -114,6 +139,7 @@ export default function ContactPage() {
                     type="text"
                     id="name"
                     name="name"
+                    autoComplete="name"
                     required
                     className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   />
@@ -127,6 +153,7 @@ export default function ContactPage() {
                     type="email"
                     id="email"
                     name="email"
+                    autoComplete="email"
                     required
                     className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   />
@@ -147,9 +174,11 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-black text-white px-6 py-3 rounded-md hover:bg-gray-900 transition-colors"
+                  disabled={isSending}
+                  aria-busy={isSending}
+                  className="w-full bg-black text-white px-6 py-3 rounded-md hover:bg-gray-900 transition-colors disabled:opacity-60 disabled:cursor-wait"
                 >
-                  Send
+                  {isSending ? 'Sending…' : 'Send'}
                 </button>
               </form>
             )}

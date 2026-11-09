@@ -72,8 +72,8 @@ export default function BankingAppCaseStudy() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold mb-3">Home</h3>
               <BeforeAfterComparison
-                beforeImage="/images/HP before.png"
-                afterImage="/images/HP after.png"
+                beforeImage="/images/HP before.webp"
+                afterImage="/images/HP after.webp"
                 alt="VÚB Banking App home screen redesign"
               />
               <p className="text-lg leading-relaxed">
@@ -84,8 +84,8 @@ export default function BankingAppCaseStudy() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold mb-3">Account</h3>
               <BeforeAfterComparison
-                beforeImage="/images/Account befote.png"
-                afterImage="/images/Account after.png"
+                beforeImage="/images/Account befote.webp"
+                afterImage="/images/Account after.webp"
                 alt="VÚB Banking App account detail view redesign"
               />
               <p className="text-lg leading-relaxed">
@@ -96,8 +96,8 @@ export default function BankingAppCaseStudy() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold mb-3">Money Transfer</h3>
               <BeforeAfterComparison
-                beforeImage="/images/Transfer before.png"
-                afterImage="/images/Transfer after.png"
+                beforeImage="/images/Transfer before.webp"
+                afterImage="/images/Transfer after.webp"
                 alt="VÚB Banking App transfer flow redesign"
               />
               <p className="text-lg leading-relaxed">

@@ -177,8 +177,8 @@ export default function ChismeCaseStudyPage() {
               </p>
               <div className="mt-4">
                 <BeforeAfterComparison
-                  beforeImage="/chisme/iterations/Map discovery - before.png"
-                  afterImage="/chisme/iterations/Map discovery - after.png"
+                  beforeImage="/chisme/iterations/Map discovery - before.webp"
+                  afterImage="/chisme/iterations/Map discovery - after.webp"
                   alt="Map discovery - clustering"
                 />
               </div>
@@ -194,8 +194,8 @@ export default function ChismeCaseStudyPage() {
               </p>
               <div className="mt-4">
                 <BeforeAfterComparison
-                  beforeImage="/chisme/iterations/Messages - before.png"
-                  afterImage="/chisme/iterations/Messages - after.png"
+                  beforeImage="/chisme/iterations/Messages - before.webp"
+                  afterImage="/chisme/iterations/Messages - after.webp"
                   alt="Conversations - tab structure"
                 />
               </div>
@@ -211,8 +211,8 @@ export default function ChismeCaseStudyPage() {
               </p>
               <div className="mt-4">
                 <BeforeAfterComparison
-                  beforeImage="/chisme/iterations/Notifications - before.png"
-                  afterImage="/chisme/iterations/Notifications - after.png"
+                  beforeImage="/chisme/iterations/Notifications - before.webp"
+                  afterImage="/chisme/iterations/Notifications - after.webp"
                   alt="Notifications - persistent card"
                 />
               </div>
@@ -252,7 +252,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/onboarding-step-1.png"
+                        src="/chisme/onboarding-step-1.webp"
                         alt="Onboarding - enter name"
                         width={220}
                         height={465}
@@ -276,7 +276,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/onboarding-step-2.png"
+                        src="/chisme/onboarding-step-2.webp"
                         alt="Onboarding - verify age"
                         width={220}
                         height={465}
@@ -300,7 +300,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/onboarding-step-3.png"
+                        src="/chisme/onboarding-step-3.webp"
                         alt="Onboarding - set location"
                         width={220}
                         height={465}
@@ -324,7 +324,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/onboarding-step-4.png"
+                        src="/chisme/onboarding-step-4.webp"
                         alt="Onboarding - selfie verification"
                         width={220}
                         height={465}
@@ -348,7 +348,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/onboarding-step-5.png"
+                        src="/chisme/onboarding-step-5.webp"
                         alt="Onboarding - verification pending"
                         width={220}
                         height={465}
@@ -380,7 +380,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/people-flow-step-1.png"
+                        src="/chisme/people-flow-step-1.webp"
                         alt="People discovery - open map-based discovery"
                         width={220}
                         height={465}
@@ -404,7 +404,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/people-flow-step-2.png"
+                        src="/chisme/people-flow-step-2.webp"
                         alt="People discovery - adjust distance and interests"
                         width={220}
                         height={465}
@@ -428,7 +428,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/people-flow-step-3.png"
+                        src="/chisme/people-flow-step-3.webp"
                         alt="People discovery - browse people nearby"
                         width={220}
                         height={465}
@@ -452,7 +452,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/people-flow-step-4.png"
+                        src="/chisme/people-flow-step-4.webp"
                         alt="People discovery - open profile details"
                         width={220}
                         height={465}
@@ -476,7 +476,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/people-flow-step-5.png"
+                        src="/chisme/people-flow-step-5.webp"
                         alt="People discovery - start a conversation"
                         width={220}
                         height={465}
@@ -508,7 +508,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/plan-flow-step-1.png"
+                        src="/chisme/plan-flow-step-1.webp"
                         alt="Plan creation - discover nearby plans"
                         width={220}
                         height={465}
@@ -532,7 +532,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/plan-flow-step-2.png"
+                        src="/chisme/plan-flow-step-2.webp"
                         alt="Plan creation - create a new plan"
                         width={220}
                         height={465}
@@ -556,7 +556,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/plan-flow-step-3.png"
+                        src="/chisme/plan-flow-step-3.webp"
                         alt="Plan creation - choose location"
                         width={220}
                         height={465}
@@ -580,7 +580,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/plan-flow-step-4.png"
+                        src="/chisme/plan-flow-step-4.webp"
                         alt="Plan creation - publish the plan"
                         width={220}
                         height={465}
@@ -604,7 +604,7 @@ export default function ChismeCaseStudyPage() {
                     </p>
                     <div className="flex justify-center">
                       <Image
-                        src="/chisme/plan-flow-step-5.png"
+                        src="/chisme/plan-flow-step-5.webp"
                         alt="Plan creation - start conversation"
                         width={220}
                         height={465}

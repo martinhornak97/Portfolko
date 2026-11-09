@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     'Enterprise UX for an internal insurance platform across multiple domains. Design systems, complex workflows, and greenfield product design (under NDA).',
   path: '/projects/neuron',
-  ogImagePath: '/images/neuron.png',
+  ogImagePath: '/og/neuron.png',
   ogImageAlt: 'Neuron platform',
 });
 

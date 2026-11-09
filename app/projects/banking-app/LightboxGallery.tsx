@@ -9,7 +9,7 @@ import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
 const galleryImages = Array.from({ length: 8 }, (_, i) => ({
-  src: `/images/VUB ${i + 1}.png`,
+  src: `/images/VUB ${i + 1}.webp`,
   alt: `VÚB redesign screen ${i + 1}`,
 }));
 

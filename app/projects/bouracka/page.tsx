@@ -14,12 +14,12 @@ export default function BourackaCaseStudy() {
 
   const isDesktop = viewMode === 'desktop'
   const desktopSlides = [
-    { src: '/bouracka/homepage-before.png', alt: 'Desktop before' },
-    { src: '/bouracka/homepage-after.png', alt: 'Desktop after' },
+    { src: '/bouracka/homepage-before.webp', alt: 'Desktop before' },
+    { src: '/bouracka/homepage-after.webp', alt: 'Desktop after' },
   ]
   const mobileSlides = [
-    { src: '/bouracka/mobile-before.png', alt: 'Mobile before' },
-    { src: '/bouracka/mobile-after.png', alt: 'Mobile after' },
+    { src: '/bouracka/mobile-before.webp', alt: 'Mobile before' },
+    { src: '/bouracka/mobile-after.webp', alt: 'Mobile after' },
   ]
   const activeSlides = isDesktop ? desktopSlides : mobileSlides
 
@@ -96,7 +96,7 @@ export default function BourackaCaseStudy() {
                 >
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
-                      src="/bouracka/homepage-before.png"
+                      src="/bouracka/homepage-before.webp"
                       alt="Bouračka homepage before the restructuring"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
@@ -120,7 +120,7 @@ export default function BourackaCaseStudy() {
                 >
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
-                      src="/bouracka/homepage-after.png"
+                      src="/bouracka/homepage-after.webp"
                       alt="Bouračka homepage after restructuring for real incident usage"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
@@ -146,7 +146,7 @@ export default function BourackaCaseStudy() {
                 >
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
-                      src="/bouracka/mobile-before.png"
+                      src="/bouracka/mobile-before.webp"
                       alt="Bouračka mobile homepage before the restructuring"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"
@@ -170,7 +170,7 @@ export default function BourackaCaseStudy() {
                 >
                   <div className="relative w-full h-[300px] rounded-xl overflow-hidden border border-gray-200">
                     <Image
-                      src="/bouracka/mobile-after.png"
+                      src="/bouracka/mobile-after.webp"
                       alt="Bouračka mobile homepage after restructuring for real incident usage"
                       fill
                       sizes="(max-width: 768px) 100vw, 340px"

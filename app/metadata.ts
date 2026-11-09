@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: '/images/chisme-preview.png',
+        url: '/og/home.png',
         width: 1200,
         height: 630,
-        alt: 'Selected UX and product design work',
+        alt: 'Martin Horňak - Senior product designer for complex products',
       },
     ],
   },
@@ -33,6 +33,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Martin Horňak - Senior Product Designer',
     description,
-    images: ['/images/chisme-preview.png'],
+    images: ['/og/home.png'],
   },
 };
